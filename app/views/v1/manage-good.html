@@ -9,14 +9,14 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <span class="govuk-caption-l">Land details</span>
+      <span class="govuk-caption-l">Public good</span>
       <h1 class="govuk-heading-l">
         {{ good.name }}
       </h1>
 
       {% if good.warning %}
       {{ govukInsetText({
-        html: "<p>The Forestry Commission recommend you fell 50% of this land. This may affect your ELM payments if you do not.</p>
+        html: "<p>The Forestry Commission has recommended you fell 50% of the woodland in W17754. If you do not, your ELM payments may be affected.</p>
         <p><a href='what-to-do'>Review the recommendation</a></p>"
       }) }}
       {% endif %}
@@ -27,15 +27,24 @@
       <dl class="govuk-summary-list">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
+            Parcel ID
+          </dt>
+          <dd class="govuk-summary-list__value">
+            W17754
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
             Type
           </dt>
           <dd class="govuk-summary-list__value">
             {{ good.type }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
-              Change
-            </a>
+            
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -46,9 +55,7 @@
             {{ good.species }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
-              Change
-            </a>
+            
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -59,9 +66,7 @@
             {{ good.area }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
-              Change
-            </a>
+            
           </dd>
         </div>
       </dl>
