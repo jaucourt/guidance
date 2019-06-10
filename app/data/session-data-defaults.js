@@ -19,6 +19,11 @@ Example usage:
 
 module.exports = {
 
-  // Insert values here
+  "public_goods": [
+    {
+      "id": "1",
+      "name": "Woodland ABC"
+    }
+  ]
 
 }

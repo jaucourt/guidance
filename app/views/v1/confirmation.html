@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">Agreement confirmed</h1>
+        <div class="govuk-panel__body">
+          Your reference number<br><strong>HDJ2123F</strong>
+        </div>
+      </div>
+
+      <p>
+        We have sent you a confirmation email.
+      </p>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+      <p>We&rsquo;ve updated your agreement to for Woodland ABC. You will neeed to complete restocking by 10 June 2020.</p>
+
+      {{ govukInsetText({
+        html: 'The first step is to <a href="apply-to-fell">apply for a felling licence</a>.'
+      }) }}
+
+      <p>If you already have a felling licence you can <a href="#0">apply for a grant</a> or <a href="#0">start felling</a> now.</p>
+
+      {# Remove the class 'govuk-button--start' for a standard button #}
+      {{ govukButton({
+          text: 'Back to your ELM account',
+          href: 'lmp'
+      }) }}
+
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,25 +1,44 @@
 {% extends "layout.html" %}
 
-{% block pageTitle %}
-  Question page
-{% endblock %}
-
-{% block beforeContent %}
-  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
-{% endblock %}
+{# Adds a class to increase vertical spacing for pages without a back button #}
+{% set mainClasses = "govuk-main-wrapper--l" %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">
-        Heading goes here
+      <h1 class="govuk-heading-l">
+        Your public goods
       </h1>
 
-      <p>This is a paragraph of text. It explains in more detail what has happened and wraps across several lines.</p>
+      {{ govukInsetText({
+        html: "<p>The Forestry Commission recommend you fell 50% of <a href='#0'>Woodland ABC</a>. This may affect your ELM payments if you do not.</p>
+        <p><a href='what-to-do'>Review the recommendation</a></p>"
+      }) }}
 
-      <p>This paragraph has a link to <a href="/url/of/onward/page">find out more about this subject</a>.</p>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <!-- <th scope="col">ID</th> -->
+            <th class="govuk-table__header" scope="col">Name</th>
+            <th class="govuk-table__header" scope="col"></th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          {% for good in goods %}
+          <tr class="govuk-table__row">
+            <!-- <td>{{ good.id }}</td> -->
+            <th class="govuk-table__header" scope="row">
+              {{ good.name }}
+            </th>
+            <td class="govuk-table__cell">
+              <a href="#0">View</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+</table>
 
     </div>
   </div>

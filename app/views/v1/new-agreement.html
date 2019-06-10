@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="what-to-do">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="confirmation" method="post">
+
+        <h1 class="govuk-heading-l">
+          Your new agreement for Woodland ABC
+        </h1>
+
+        <p>This will create a new agreement on your ELM account for Woodland ABC. You will need to complete the steps for this for this within the next 12 months, when a review with your ELM adviser will need to take place.</p>
+
+        <h2 class="govuk-heading-m">
+          Steps you need to complete
+        </h2>
+        <ul class="govuk-list govuk-list--number">
+          <li>Apply for a felling licence</li>
+          <li>Apply for a grant (optional)</li>
+          <li>Fell your trees</li>
+          <li>Restock</li>
+        </ul>
+
+        {{ govukWarningText({
+            text: 'You need to have restocked your woodland within 12 months',
+            iconFallbackText: 'Warning'
+        }) }}
+
+        {{ govukButton({
+            html: 'Agree and continue'
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
