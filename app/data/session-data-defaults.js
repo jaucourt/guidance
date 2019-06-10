@@ -23,21 +23,40 @@ module.exports = {
 
   "public_goods": [
     {
-      "id": "W17754",
-      "name": "Woodland",
+      "id": "1",
       "type": "Woodland",
       "species": "Ash",
       "area": "10.1 hectares",
       "value": "£1,056",
-      "status": "Decision required"
+      "status": "Decision required",
+      "issue": "Ash dieback"
     },
     {
-      "id": "WF00243",
-      "name": "Wildflowers in far field",
-      "type": "Meadowmat for Birds and Bees",
+      "id": "2",
+      "type": "Meadowmat for birds and bees",
       "species": "Wildflower",
       "area": "1.85 hectares",
       "value": "£800"
+    },
+    {
+      "id": "3",
+      "type": "Hedgerow",
+      "species": "Green Beech",
+      "area": "0.8 hectares",
+      "value": "£670"
+    },
+    {
+      "id": "4",
+      "type": "Winter bird feed",
+      "species": "Mixed",
+      "area": "1.1 hectares",
+      "value": "£459"
+    },
+    {
+      "id": "5",
+      "type": "Wetland",
+      "area": "2 hectares",
+      "value": "1150"
     }
   ]
 
