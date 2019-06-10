@@ -1,5 +1,9 @@
 {% extends "layout.html" %}
 
+{% block pageTitle %}
+  What do you want to do
+{% endblock %}
+
 {% block beforeContent %}
   <a class="govuk-back-link" href="lmp">Back</a>
 {% endblock %}
@@ -9,7 +13,10 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
+
       <form class="form" action="new-agreement" method="post">
+
+
 
         {{ govukRadios({
             idPrefix: 'what-to-do',
@@ -22,22 +29,22 @@
               }
             },
             hint: {
-              text: ''
+              text: 'The Forestry Commission has recommended you fell 50% of Woodland ABC. You may need to restock the woodland after it is felled.'
             },
             items: [
             {
               value: "fell-trees",
-              text: "Fell 50% of woodland and restock",
+              text: "Fell 50% of woodland",
               label: {
                 classes: "govuk-label--s"
               },
               hint: {
-                text: "This means your ELM payment will continue, subject to your annual review."
+                text: "You will need to create a new agreement for this public good in your land management plan."
               }
             },
             {
               value: "remove-good",
-              text: "Remove this good from your ELM agreement",
+              text: "Remove this public good from your ELM agreement",
               label: {
                 classes: "govuk-label--s"
               },

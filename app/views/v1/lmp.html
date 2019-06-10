@@ -3,17 +3,21 @@
 {# Adds a class to increase vertical spacing for pages without a back button #}
 {% set mainClasses = "govuk-main-wrapper--l" %}
 
+{% block pageTitle %}
+  Your land management plan
+{% endblock %}
+
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        Your public goods
+        Elm Tree Farm's land management plan
       </h1>
 
       {{ govukInsetText({
-        html: "<p>The Forestry Commission recommend you fell 50% of <a href='#0'>Woodland ABC</a>. This may affect your ELM payments if you do not.</p>
+        html: "<p>The Forestry Commission has recommended you fell 50% of Woodland ABC. This may affect your ELM payments if you do not.</p>
         <p><a href='what-to-do'>Review the recommendation</a></p>"
       }) }}
 
@@ -31,7 +35,7 @@
           <tr class="govuk-table__row">
             <!-- <td>{{ good.id }}</td> -->
             <th class="govuk-table__header" scope="row">{{ good.name }}</th>
-            <td class="govuk-table__cell" scope="row">{{ good.name.woodland }}</td>
+            <td class="govuk-table__cell" scope="row">East woodland</td>
             <td class="govuk-table__cell"><a href="/good">Manage</a></td>
           </tr>
           <tr class="govuk-table__row">
