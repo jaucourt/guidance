@@ -9,6 +9,67 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 
+<<<<<<< HEAD
+      <span class="govuk-caption-l">Public good</span>
+      <h1 class="govuk-heading-l">
+        {{ good.name }}
+      </h1>
+
+      {% if good.warning %}
+      {{ govukInsetText({
+        html: "<p>The Forestry Commission has recommended you fell 50% of the woodland in W17754. If you do not, your ELM payments may be affected.</p>
+        <p><a href='what-to-do'>Review the recommendation</a></p>"
+      }) }}
+      {% endif %}
+
+      <!-- <h2 class="govuk-heading-m">
+        Details
+      </h2> -->
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Parcel ID
+          </dt>
+          <dd class="govuk-summary-list__value">
+            W17754
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Type
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ good.type }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Species
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ good.species }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Area
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ good.area }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            
+          </dd>
+=======
       <span class="govuk-caption-xl">Land details</span>
       <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">
         {{ good.name }}
@@ -25,6 +86,7 @@
           <p>The Forestry Commission has recommended you fell 50% of this public good. This may affect your ELM payments if you do not.</p>
 
           <p><a href='what-to-do'>Review the recommendation</a></p>
+>>>>>>> 30c524086bd895679b6cafd3535fe2cc769f6926
         </div>
         {% endif %}
 
