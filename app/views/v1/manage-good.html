@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="lmp">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">Land details</span>
+      <h1 class="govuk-heading-l">
+        {{ good.name }}
+      </h1>
+
+      {% if good.warning %}
+      {{ govukInsetText({
+        html: "<p>The Forestry Commission recommend you fell 50% of this land. This may affect your ELM payments if you do not.</p>
+        <p><a href='what-to-do'>Review the recommendation</a></p>"
+      }) }}
+      {% endif %}
+
+      <!-- <h2 class="govuk-heading-m">
+        Details
+      </h2> -->
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Type
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ good.type }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Species
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ good.species }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Area
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ good.area }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> contact information</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+    </div>
+  </div>
+
+{% endblock %}

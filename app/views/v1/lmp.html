@@ -13,15 +13,14 @@
       </h1>
 
       {{ govukInsetText({
-        html: "<p>The Forestry Commission recommend you fell 50% of <a href='#0'>Woodland ABC</a>. This may affect your ELM payments if you do not.</p>
+        html: "<p>The Forestry Commission recommend you fell 50% of <a href='manage-good?id=W17754'>Woodland ABC</a>. This may affect your ELM payments if you do not.</p>
         <p><a href='what-to-do'>Review the recommendation</a></p>"
       }) }}
 
       <table class="govuk-table">
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
-            <!-- <th scope="col">ID</th> -->
-            <th class="govuk-table__header" scope="col">Land designation</th>
+            <th class="govuk-table__header" scope="col">Land id</th>
             <th class="govuk-table__header" scope="col">Name</th>
             <th class="govuk-table__header" scope="col"></th>
           </tr>
@@ -29,25 +28,21 @@
         <tbody class="govuk-table__body">
           {% for good in goods %}
           <tr class="govuk-table__row">
-            <!-- <td>{{ good.id }}</td> -->
             <th class="govuk-table__header" scope="row">
-              {{ good.name }}
+              {{ good.id }}
             </th>
-            <td class="govuk-table__header" scope="row">
+            <td class="govuk-table__cell" scope="row">
               {{ good.name }}
             </td>
             <td class="govuk-table__cell">
-              <a href="#0">Manage</a>
+              <a href="manage-good?id={{ good.id }}">Manage</a>
             </td>
           </tr>
           {% endfor %}
         </tbody>
-</table>
+      </table>
 
     </div>
   </div>
 
 {% endblock %}
-
-
-

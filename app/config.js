@@ -4,7 +4,7 @@
 
 module.exports = {
   // Service name used in header. Eg: 'Renew your passport'
-  serviceName: 'Tree health / ELM prototype',
+  serviceName: 'Manage your ELM agreement',
 
   // Default port that prototype runs on
   port: '3000',
