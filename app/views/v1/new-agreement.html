@@ -30,12 +30,14 @@
         </ul>
 
         {{ govukWarningText({
-            text: 'You must restock the woodland in W17754 within 12 months to keep your payments',
-            iconFallbackText: 'Warning'
+          text: 'You must restock the woodland in W17754 within 12 months to keep your payments',
+          iconFallbackText: 'Warning'
         }) }}
 
+        <input type="hidden" name="warning" value="false">
+
         {{ govukButton({
-            html: 'Create a new agreement'
+          html: 'Create a new agreement'
         }) }}
 
       </form>

@@ -19,7 +19,7 @@
     <div class="govuk-grid-column-two-thirds">
       <div class="dashboard-main">
 
-        {% if good.warning %}
+        {% if data['warning'] == "true" and good.name == "Woodland" %}
         <div class="panel panel-border-wide alert-error">
           <h2 class="govuk-heading-s">Issue reported</h2>
           <p>The Forestry Commission has recommended you fell 50% of this public good. This may affect your ELM payments if you do not.</p>

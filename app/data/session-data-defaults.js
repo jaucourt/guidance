@@ -19,14 +19,15 @@ Example usage:
 
 module.exports = {
 
+  "warning": "true",
+
   "public_goods": [
     {
       "id": "W17754",
       "name": "Woodland",
       "type": "Woodland",
       "species": "Ash",
-      "area": "10.1 hectares",
-      "warning": "true"
+      "area": "10.1 hectares"
     },
     {
       "id": "WF00243",
