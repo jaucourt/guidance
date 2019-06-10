@@ -22,3 +22,12 @@ router.get('/v1/manage-good', (req, res) => {
     res.render('v1/manage-good')
   }
 })
+
+// Go to remove good page if they choose that option
+router.get('/v1/new-agreement', function (req, res) {
+  if (req.session.data['what-to-do'] == "remove-good") {
+    res.redirect('/v1/remove-good')
+  } else {
+    res.render('v1/new-agreement')
+  }
+})
