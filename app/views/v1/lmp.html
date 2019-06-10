@@ -17,7 +17,11 @@
       </h1>
 
       {{ govukInsetText({
+<<<<<<< HEAD
         html: "<p>The Forestry Commission has recommended you fell 50% of Woodland ABC. This may affect your ELM payments if you do not.</p>
+=======
+        html: "<p>The Forestry Commission recommend you fell 50% of <a href='manage-good?id=W17754'>Woodland ABC</a>. This may affect your ELM payments if you do not.</p>
+>>>>>>> e7bb26f20deeafaaa5863055d4952544cc5f1aac
         <p><a href='what-to-do'>Review the recommendation</a></p>"
       }) }}
 
@@ -25,7 +29,7 @@
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
             <!-- <th scope="col">ID</th> -->
-            <th class="govuk-table__header" scope="col">Land designation</th>
+            <th class="govuk-table__header" scope="col">Parcel ID</th>
             <th class="govuk-table__header" scope="col">Name</th>
             <th class="govuk-table__header" scope="col"></th>
           </tr>
@@ -34,6 +38,7 @@
           {% for good in goods %}
           <tr class="govuk-table__row">
             <!-- <td>{{ good.id }}</td> -->
+<<<<<<< HEAD
             <th class="govuk-table__header" scope="row">{{ good.name }}</th>
             <td class="govuk-table__cell" scope="row">East woodland</td>
             <td class="govuk-table__cell"><a href="/good">Manage</a></td>
@@ -49,10 +54,21 @@
             <th class="govuk-table__header" scope="row">LP2947</th>
             <td class="govuk-table__cell" scope="row">Lower field</td>
             <td class="govuk-table__cell"><a href="#">Manage</a></td>
+=======
+            <th class="govuk-table__header" scope="row">
+              {{ good.id }}
+            </th>
+            <td class="govuk-table__cell" scope="row">
+              {{ good.name }}
+            </td>
+            <td class="govuk-table__cell">
+              <a href="manage-good?id={{ good.id }}">Manage</a>
+            </td>
+>>>>>>> e7bb26f20deeafaaa5863055d4952544cc5f1aac
           </tr>
           {% endfor %}
         </tbody>
-</table>
+      </table>
 
     </div>
   </div>
