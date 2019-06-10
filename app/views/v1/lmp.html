@@ -17,7 +17,7 @@
       </h1>
 
       {{ govukInsetText({ 
-        html: "<p>The Forestry Commission has recommended you fell 50% of Woodland ABC. This may affect your ELM payments if you do not.</p>
+        html: "<p>The Forestry Commission has recommended you fell 50% of the woodland in W17754. This may affect your ELM payments if you do not.</p>
 
         <p><a href='what-to-do'>Review the recommendation</a></p>"
       }) }}
@@ -33,8 +33,6 @@
         </thead>
         <tbody class="govuk-table__body">
           {% for good in goods %}
-          
-          
 
             <th class="govuk-table__header" scope="row">
               {{ good.id }}
