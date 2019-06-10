@@ -25,7 +25,7 @@ $govuk-global-styles: true;
   padding-top: 15px;
 }
 
-.govuk-tag--action {
+.govuk-tag--warn {
   background-color: $govuk-error-colour;
 }
 
@@ -36,23 +36,14 @@ $govuk-global-styles: true;
   clear: both;
   border-left-style: solid;
   border-color: #bfc1c3;
-  padding: 0.2em 0.7em;
+  padding: 1em 0.7em 0.2em;
   margin-bottom: 30px;
-}
-
-h2.govuk-heading-s {
-	font-size: 22px;
-	margin-bottom: 0.6em;
-	margin-top: 0.6em;
+  border-color: #2b8cc4;
+  background-color: #dbeff9;
 }
 
 .panel-border-wide {
   border-left-width: 10px;
-}
-
-.panel-border-wide.alert-default {
-  border-color: #2b8cc4;
-  background-color: #dbeff9;
 }
 
 .panel-border-wide.alert-success {

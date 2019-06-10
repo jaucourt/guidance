@@ -13,10 +13,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-
       <form class="form" action="new-agreement" method="post">
-
-
 
         {{ govukRadios({
             idPrefix: 'what-to-do',
@@ -29,7 +26,7 @@
               }
             },
             hint: {
-              text: 'The Forestry Commission has recommended you fell 50% of the woodland in W17754. You may need to restock the woodland after it is felled.'
+              text: 'The Forestry Commission has recommended you fell 50% of the woodland. You will need to restock the woodland after it is felled.'
             },
             items: [
             {
@@ -39,17 +36,17 @@
                 classes: "govuk-label--s"
               },
               hint: {
-                text: "You will need to amend this public good in your land management plan."
+                text: ""
               }
             },
             {
               value: "remove-good",
-              text: "Remove this public good from your ELM agreement",
+              text: "Remove this natural capital from your ELM agreement",
               label: {
                 classes: "govuk-label--s"
               },
               hint: {
-                text: "This means you will lose £1,045 a year."
+                text: "This means you will lose £1,056 a year."
               }
             }
             ]

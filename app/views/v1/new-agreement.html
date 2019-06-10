@@ -16,28 +16,27 @@
       <form class="form" action="confirmation" method="post">
 
         <h1 class="govuk-heading-l">
-          Create a new agreement for W17754
+          Update your agreement
         </h1>
 
-        <p>To keep getting payments for W17754 you must create a new agreement for this public good.</p>
-        <p>You must also agree to complete the following steps.</p>
+        <p>To keep getting payments for your woodland you must complete the following steps:</p>
 
         <ul class="govuk-list govuk-list--number">
           <li>Apply for a felling licence</li>
-          <li>Apply for a grant (optional)</li>
-          <li>Fell the woodland in W17754</li>
-          <li>Restock the woodland in W17754</li>
+          <li>Check if you can get a grant (optional)</li>
+          <li>Fell the woodland </li>
+          <li>Restock the woodland </li>
         </ul>
 
         {{ govukWarningText({
-          text: 'You must restock the woodland in W17754 within 12 months to keep your payments',
+          text: 'You must restock the woodland within 12 months to keep your payments',
           iconFallbackText: 'Warning'
         }) }}
 
         <input type="hidden" name="warning" value="false">
 
         {{ govukButton({
-          html: 'Create a new agreement'
+          html: 'Update your agreement'
         }) }}
 
       </form>

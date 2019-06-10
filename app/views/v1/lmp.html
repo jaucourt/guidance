@@ -27,7 +27,7 @@
 
 
         <h2 class="govuk-heading-m">
-          Your public goods
+          Your natural capital
         </h2>
         <table class="govuk-table">
           <thead class="govuk-table__head">
@@ -44,9 +44,13 @@
                 {{ good.type }}
               </th>
               <td class="govuk-table__cell" scope="row">
-                {% if good.status %}
+                {% if good.status and data['warning'] == "true" %}
+                <strong class="govuk-tag govuk-tag--warn">
+                  decision required
+                </strong>
+                {% elif good.status %}
                 <strong class="govuk-tag govuk-tag--action">
-                  {{ good.status }}
+                  action required
                 </strong>
                 {% endif %}
               </td>
