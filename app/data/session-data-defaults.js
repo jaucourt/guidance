@@ -21,8 +21,19 @@ module.exports = {
 
   "public_goods": [
     {
-      "id": "1",
-      "name": "Woodland ABC"
+      "id": "W17754",
+      "name": "Woodland",
+      "type": "Woodland",
+      "species": "Ash",
+      "area": "10.1 hectares",
+      "warning": "true"
+    },
+    {
+      "id": "WF00243",
+      "name": "Wildflowers in far field",
+      "type": "Meadowmat for Birds and Bees",
+      "species": "Wildflower",
+      "area": "1.85 hectares"
     }
   ]
 
