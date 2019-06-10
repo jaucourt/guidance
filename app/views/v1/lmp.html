@@ -40,7 +40,7 @@
           <tbody class="govuk-table__body">
             {% for good in goods | sort(false, true, 'type') %}
 
-              <th class="govuk-table__header" scope="row">
+              <td class="govuk-table__cell">
                 {{ good.type }}
               </th>
               <td class="govuk-table__cell" scope="row">
