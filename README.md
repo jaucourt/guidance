@@ -12,6 +12,9 @@ Our services support and incentivise woodland managers toward good behaviours wh
 * How do we build trust in our systemdwith iour users?
 * What do we need to report on and to who?
 
+## Hypothesis to test
+In the event of a disease outbreak, if a woodland manager follows DEFRA recommendations their ELM payments will be maintained 
+
 ## Prototype scenario
 Frank the farmer has completed a land management plan and has just had a tree disease diagnosed by the Forestry commision, what happens next?
 * Non-commercial woodland
