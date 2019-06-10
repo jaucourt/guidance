@@ -25,6 +25,10 @@ $govuk-global-styles: true;
   padding-top: 15px;
 }
 
+.govuk-tag--action {
+  background-color: $govuk-error-colour;
+}
+
 
 
 .panel {

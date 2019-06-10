@@ -27,14 +27,17 @@ module.exports = {
       "name": "Woodland",
       "type": "Woodland",
       "species": "Ash",
-      "area": "10.1 hectares"
+      "area": "10.1 hectares",
+      "value": "£1,056",
+      "status": "Action required"
     },
     {
       "id": "WF00243",
       "name": "Wildflowers in far field",
       "type": "Meadowmat for Birds and Bees",
       "species": "Wildflower",
-      "area": "1.85 hectares"
+      "area": "1.85 hectares",
+      "value": "£800"
     }
   ]
 

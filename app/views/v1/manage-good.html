@@ -9,9 +9,9 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 
-      <span class="govuk-caption-xl">Land details</span>
+      <span class="govuk-caption-xl">Public good details</span>
       <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">
-        {{ good.name }}
+        {{ good.type }}
       </h1>
 
     </div>
@@ -26,6 +26,14 @@
 
           <p><a href='what-to-do'>Review the recommendation</a></p>
         </div>
+
+        {% elseif good.name == "Woodland" %}
+        <div class="panel panel-border-wide alert-default">
+          <h2 class="govuk-heading-s">Action required</h2>
+          <p>You must complete the restock of this good by 10 June 2020.</p>
+
+          <p><a href="apply-to-fell">Apply for a felling licence</a></p>
+        </div>
         {% endif %}
 
         <!-- <h2 class="govuk-heading-m">
@@ -39,11 +47,11 @@
             <dd class="govuk-summary-list__value">
               {{ good.type }}
             </dd>
-            <dd class="govuk-summary-list__actions">
+            <!-- <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
                 Change
               </a>
-            </dd>
+            </dd> -->
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -52,24 +60,37 @@
             <dd class="govuk-summary-list__value">
               {{ good.species }}
             </dd>
-            <dd class="govuk-summary-list__actions">
+            <!-- <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
                 Change
               </a>
-            </dd>
+            </dd> -->
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Area
+              Total area
             </dt>
             <dd class="govuk-summary-list__value">
               {{ good.area }}
             </dd>
-            <dd class="govuk-summary-list__actions">
+            <!-- <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
                 Change
               </a>
+            </dd> -->
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Yearly value
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ good.value }}
             </dd>
+            <!-- <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change
+              </a>
+            </dd> -->
           </div>
         </dl>
 

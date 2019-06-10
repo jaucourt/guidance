@@ -20,14 +20,14 @@
     <div class="govuk-grid-column-two-thirds">
       <div class="dashboard-main">
 
-        {% if data['warning'] == "true" %}
+        <!-- {% if data['warning'] == "true" %}
         <div class="panel panel-border-wide alert-error">
           <h2 class="govuk-heading-s">Issue reported</h2>
           <p>The Forestry Commission has recommended you fell 50% of the woodland in W17754. This may affect your ELM payments if you do not.</p>
 
           <p><a href='what-to-do'>Review the recommendation</a></p>
         </div>
-        {% endif %}
+        {% endif %} -->
 
 
         <h2 class="govuk-heading-m">
@@ -36,9 +36,8 @@
         <table class="govuk-table">
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
-              <!-- <th scope="col">ID</th> -->
-              <th class="govuk-table__header" scope="col">Parcel ID</th>
-              <th class="govuk-table__header" scope="col">Name</th>
+              <th class="govuk-table__header" scope="col">Type</th>
+              <th class="govuk-table__header" scope="col">Status</th>
               <th class="govuk-table__header" scope="col"></th>
             </tr>
           </thead>
@@ -46,10 +45,14 @@
             {% for good in goods %}
 
               <th class="govuk-table__header" scope="row">
-                {{ good.id }}
+                {{ good.type }}
               </th>
               <td class="govuk-table__cell" scope="row">
-                {{ good.name }}
+                {% if good.status %}
+                <strong class="govuk-tag govuk-tag--action">
+                  {{ good.status }}
+                </strong>
+                {% endif %}
               </td>
               <td class="govuk-table__cell">
                 <a href="manage-good?id={{ good.id }}">Manage</a>
