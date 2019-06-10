@@ -16,12 +16,9 @@
         Elm Tree Farm's land management plan
       </h1>
 
-      {{ govukInsetText({
-<<<<<<< HEAD
+      {{ govukInsetText({ 
         html: "<p>The Forestry Commission has recommended you fell 50% of Woodland ABC. This may affect your ELM payments if you do not.</p>
-=======
-        html: "<p>The Forestry Commission recommend you fell 50% of <a href='manage-good?id=W17754'>Woodland ABC</a>. This may affect your ELM payments if you do not.</p>
->>>>>>> e7bb26f20deeafaaa5863055d4952544cc5f1aac
+
         <p><a href='what-to-do'>Review the recommendation</a></p>"
       }) }}
 
@@ -36,25 +33,9 @@
         </thead>
         <tbody class="govuk-table__body">
           {% for good in goods %}
-          <tr class="govuk-table__row">
-            <!-- <td>{{ good.id }}</td> -->
-<<<<<<< HEAD
-            <th class="govuk-table__header" scope="row">{{ good.name }}</th>
-            <td class="govuk-table__cell" scope="row">East woodland</td>
-            <td class="govuk-table__cell"><a href="/good">Manage</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <!-- <td>{{ good.id }}</td> -->
-            <th class="govuk-table__header" scope="row">LP7890</th>
-            <td class="govuk-table__cell" scope="row">Upper field</td>
-            <td class="govuk-table__cell"><a href="#">Manage</a></td>
-          </tr>
-          <tr class="govuk-table__row">
-            <!-- <td>{{ good.id }}</td> -->
-            <th class="govuk-table__header" scope="row">LP2947</th>
-            <td class="govuk-table__cell" scope="row">Lower field</td>
-            <td class="govuk-table__cell"><a href="#">Manage</a></td>
-=======
+          
+          
+
             <th class="govuk-table__header" scope="row">
               {{ good.id }}
             </th>
@@ -64,7 +45,7 @@
             <td class="govuk-table__cell">
               <a href="manage-good?id={{ good.id }}">Manage</a>
             </td>
->>>>>>> e7bb26f20deeafaaa5863055d4952544cc5f1aac
+
           </tr>
           {% endfor %}
         </tbody>
