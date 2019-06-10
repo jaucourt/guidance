@@ -30,15 +30,21 @@
           {% for good in goods %}
           <tr class="govuk-table__row">
             <!-- <td>{{ good.id }}</td> -->
-            <th class="govuk-table__header" scope="row">
-              {{ good.name }}
-            </th>
-            <td class="govuk-table__header" scope="row">
-              {{ good.name }}
-            </td>
-            <td class="govuk-table__cell">
-              <a href="#0">Manage</a>
-            </td>
+            <th class="govuk-table__header" scope="row">{{ good.name }}</th>
+            <td class="govuk-table__cell" scope="row">{{ good.name.woodland }}</td>
+            <td class="govuk-table__cell"><a href="/good">Manage</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <!-- <td>{{ good.id }}</td> -->
+            <th class="govuk-table__header" scope="row">LP7890</th>
+            <td class="govuk-table__cell" scope="row">Upper field</td>
+            <td class="govuk-table__cell"><a href="#">Manage</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <!-- <td>{{ good.id }}</td> -->
+            <th class="govuk-table__header" scope="row">LP2947</th>
+            <td class="govuk-table__cell" scope="row">Lower field</td>
+            <td class="govuk-table__cell"><a href="#">Manage</a></td>
           </tr>
           {% endfor %}
         </tbody>
@@ -48,6 +54,3 @@
   </div>
 
 {% endblock %}
-
-
-
