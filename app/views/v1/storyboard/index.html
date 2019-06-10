@@ -5,20 +5,26 @@
 {% endblock %}
 
 {% block content %}
-
-  <h1 class="govuk-heading-xl">
-    Scenario
-  </h1>
-  <p class="govuk-body-l">
-    Frank the farmer is 18 months into a ELM agreement, which includes an area of woodland. DEFRA has recently sent out a regional communication advising that an outbreak of Ash Dieback has been reported in your area.
-  </p>
-  <h2 class="govuk-heading-l">Persona</h2>
-    <ul class="govuk-list govuk-list--bullet" style="margin-bottom: 3em">  
-      <li>Receiving regular monthly payments for six categories of natural capital of which one is woodland</li>
-      <li>Non-commercial mixed woodland</li>
-    </ul>
-    <hr style="margin-bottom: 3em">
-    <p class="govuk-body-l"><a href="/v1/storyboard/step-1.html" class="govuk-link">Start</a></p>
-  
-
+  <a href="#" class="govuk-back-link" onclick="window.history.go(-1); return false;">Back</a>
+  <div class="govuk-width-container">
+    <main class="govuk-main-wrapper">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <h1 class="govuk-heading-xl">
+            Scenario
+          </h1>
+        </div>
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <img src="/public/images/step-0.jpg" alt="Willow Farm" style="width: 100%">
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-body-l">You are the land manager at Willow Farm, and receive monthly ELM payments for six categories of natural capital, one of which is woodland.</p>
+          <p class="govuk-body-l">Your non-commercial, mixed woodland is well established and in good condition.</p>
+          <p class="govuk-body-l"><a href="/v1/storyboard/step-1.html" class="govuk-link">Start</a></p>
+        </div>
+      </div>
+    </main>
+  </div>
 {% endblock %}

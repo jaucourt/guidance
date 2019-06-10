@@ -5,19 +5,30 @@
 {% endblock %}
 
 {% block content %}
-
-  	<h1 class="govuk-heading-xl">
-    	Notification sent
-  	</h1>
-  	<img src="/public/images/step-5.jpg" alt="Woodland manager and ELM adviser sent alert, with link to LMP service to review">
-  	<p class="govuk-body-l">
-  	<ul class="govuk-list govuk-list--bullet">
-      <li>
-    	You and your ELM adviser are sent an alert, advising a decision is required on your ELM agreement
-	    </li>
-	</ul>
-</p>
-    <p class="govuk-body-l"><a href="/v1/lmp" class="govuk-link">Next</a></p>
-  </p>
+  <a href="#" class="govuk-back-link" onclick="window.history.go(-1); return false;">Back</a>
+  <div class="govuk-width-container">
+    <main class="govuk-main-wrapper">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <h1 class="govuk-heading-xl">
+            5. Notification sent
+          </h1>
+        </div>
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+  	       <img src="/public/images/step-5.jpg" alt="Woodland manager and ELM adviser sent alert, with link to LMP service to review" style="width: 100%">
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-body-l">
+    	       You and your ELM adviser are sent a notification, advising that a decision is required.
+           </p>
+          <p class="govuk-body-l">
+            Now you need to <a href="/v1/lmp" class="govuk-link">manage your ELM agreement</a>
+          </p>
+        </div>
+      </div>
+    </main>
+  </div>
 
 {% endblock %}
