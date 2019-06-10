@@ -29,7 +29,7 @@ module.exports = {
       "species": "Ash",
       "area": "10.1 hectares",
       "value": "£1,056",
-      "status": "Action required"
+      "status": "Decision required"
     },
     {
       "id": "WF00243",
