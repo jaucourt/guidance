@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="what-to-do">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="confirmation" method="post">
+
+        <h1 class="govuk-heading-l">
+          Remove public good from your agrement
+        </h1>
+
+
+
+        {{ govukWarningText({
+            text: 'You will lose £1,045 a year by removing this good from your agreement',
+            iconFallbackText: 'Warning'
+        }) }}
+
+        {{ govukButton({
+            html: 'Agree and continue'
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
