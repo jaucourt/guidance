@@ -1,6 +1,8 @@
 # treehealth-elm-prototype
+
 ## Goal
 Our services support and incentivise woodland managers toward good behaviours which delivers resilient woodland landscape.
+
 ## Sprint questions
 * Can we ensure that incentives are aligned across policy and services?
 * How do we ensure we avoid unintended consequences in relation to improved woodland management?
@@ -8,8 +10,9 @@ Our services support and incentivise woodland managers toward good behaviours wh
 * What data do we need to make effective decisions?
 * How do we i ntegrate data into our service?
 * How do we build trust in our systemdwith iour users?
-* What do we need to report on and to who??
-## Scenario
+* What do we need to report on and to who?
+
+## Prototype scenario
 Frank the farmer has completed a land management plan and has just had a tree disease diagnosed by the Forestry commision, what happens next?
 * Non-commercial woodland
 * Mixed woodland
