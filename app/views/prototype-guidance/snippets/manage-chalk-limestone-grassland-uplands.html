@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Habitat conservation",
+        href: "topic1-habitat-conservation"
+      },
+      {
+        text: "Grassland management",
+        href: "topic3-grassland-management"
+      },
+      {
+        text: "Manage chalk and limestone grassland in the uplands"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-xl">Guidance</span>
+      <h1 class="govuk-heading-xl">Manage chalk and limestone grassland in the uplands</h1>
+
+      <p class="govuk-body-l">Use this guidance if you manage rough grazing or moorland on limestone in Northern England. By maintaining this habitat you can help this rare grassland and the wildlife it supports to survive and thrive.</p>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <div class="app-c-published-dates " lang="en">
+        <p>Published 26 February 2019
+        <br>
+        From: <a class="govuk-link" href="https://www.gov.uk/government/organisations/natural-england">Natural England</a></p>
+      </div>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <ul class="govuk-list govuk-list--bullet">
+
+      <li><a href="manage-grassland-grazing-wildlife">Find out how to manage grassland grazing for wildlife on your land</a></li>
+
+      <li><a href="create-manage-connected-habitats">Find out how to create and manage connected habitats on your land</a></li>
+
+      <li><a href="manage-grassland-mowing-wildlife">Find out how to manage grassland mowing for wildlife on your land</a></li>
+
+      <li><a href="monitor-control-damaging-native-plants">Find out how to monitor and control damaging native plants on your land</a></li>
+
+      </ul>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
+
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Related links
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a class="govuk-link" href="manage-purple-moor-grass-rush-pasture">
+                Manage purple moor grass and rush pasture
+              </a>
+            </li>
+            <li>
+              <a class="govuk-link" href="manage-upland-hay-meadows">
+                Manage upland hay meadows
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+{% endblock %}

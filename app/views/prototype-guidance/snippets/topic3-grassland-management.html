@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Habitat conservation",
+        href: "topic1-habitat-conservation"
+      },
+      {
+        text: "Grassland management"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-xl">Habitat conservation</span>
+      <h1 class="govuk-heading-xl">Grassland management</h1>
+
+      <ul class="govuk-list govuk-list--bullet">
+
+      <li><a href="identify-species-rich-grassland">Identify species-rich grassland</a></li>
+
+      <!--<<li><a href="topic4-uplands-grassland-management">Uplands grassland management</a></li>-->
+
+      </ul>
+
+    </div>
+  </div>
+{% endblock %}

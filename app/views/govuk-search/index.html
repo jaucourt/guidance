@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Find an ELM grant
+{% endblock %}
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+  <style type="text/css">
+
+      .button-wrapper {
+        width: 1%;position: relative;display: table-cell;vertical-align: top;
+      }
+
+      .search-input {
+        border-right-width: 0;font-size: 19px;
+        line-height: 1.4736842105; font-family: Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.4736842105;
+        padding: 6px;
+        margin: 0;
+        width: 100%;
+        height: 40px;
+        border: 2px solid #0b0c0c;
+        background: #ffffff;
+        border-radius: 0;
+        box-sizing: border-box;
+        -webkit-appearance: none;position: relative;
+        display: table-cell;
+        vertical-align: top;
+        border-right:0;
+      }
+
+      button.search {
+        background-color: #1d70b8;
+        color: #ffffff;background-size: 52.5px auto;
+        background-position: 115% 50%;border: 0;
+        cursor: pointer;
+        border-radius: 0;
+        position: relative;
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        background-image: url(https://assets.publishing.service.gov.uk/finder-frontend/govuk_publishing_components/search-button-ca89b2a79f944909ceb7370d3f0b78811d32b96e883348fcd8886f63dd619585.png);
+        background-repeat: no-repeat;
+        text-indent: -5000px;
+        overflow: hidden;
+      }
+
+      .guidance-list {
+        font-weight: 700; font-size: 1.5rem; border-top: 2px solid #999; margin-top: -15px
+      }
+
+      .guidance-list li {
+        margin: 0.5em 0; padding: 0.5em 0; border-bottom: 1px solid #ccc
+      }
+</style>
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds" style="margin-bottom: 80px">
+      <form action="/govuk-search/results.html" method="get">
+        <label class="govuk-heading-xl" for="full">
+          Search GOV.UK
+        </label>
+        <div style="display: table;width: 100%;background: #ffffff;">
+          <input class="govuk-input govuk-!-width-full search-input" id="full" name="full" type="text">
+          <div style="width: 1%;position: relative;display: table-cell;vertical-align: top;">
+            <button type="submit" class="search">Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full" style="background: #1d70b8; padding: 2em 2em 1em 2em; margin: 0 0 -40px 0">
+        <p style="display: inline; color: white; font-weight: bold">Is this page useful? <a href="#" style="color: white; margin: 0 2em">Yes</a> <a href="#" style="color: white">No</a></p>
+        <p style="display: inline; float: right;color:white">Is there anything wrong with this page?</p>
+      </div>
+    </div>
+{% endblock %}

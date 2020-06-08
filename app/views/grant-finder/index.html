@@ -1,0 +1,304 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Find an ELM grant
+{% endblock %}
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block content %}
+<style type="text/css">
+      code {
+        padding-left: .5em;
+        padding-right: .5em;
+        background: #EFEFEF;
+        font-weight: normal;
+        font-family: monospace;
+      }
+
+      .autocomplete-wrapper {
+        max-width: 20em;
+        margin-bottom: 4rem;
+        border-right-width: 0;font-size: 19px;
+        line-height: 1.4736842105; font-family: Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.4736842105;
+        margin: 0;
+        width: 100%;
+        height: 40px;
+        background: #ffffff;
+        border-radius: 0;
+        box-sizing: border-box;
+        -webkit-appearance: none;position: relative;
+        display: table-cell;
+        vertical-align: top;
+        border-right:0;
+      }
+
+      .button-wrapper {
+        width: 1%;position: relative;display: table-cell;vertical-align: top;
+      }
+
+      button.autocomplete {
+        background-color: #1d70b8;
+        color: #ffffff;background-size: 52.5px auto;
+        background-position: 115% 50%;border: 0;
+        cursor: pointer;
+        border-radius: 0;
+        position: relative;
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        background-image: url(https://assets.publishing.service.gov.uk/finder-frontend/govuk_publishing_components/search-button-ca89b2a79f944909ceb7370d3f0b78811d32b96e883348fcd8886f63dd619585.png);
+        background-repeat: no-repeat;
+        text-indent: -5000px;
+        overflow: hidden;
+      }
+
+      .submitted--hidden {
+        display: none;
+      }
+
+      .guidance-list {
+        font-weight: 700; font-size: 1.5rem; border-top: 2px solid #999; margin-top: -15px
+      }
+
+      .guidance-list li {
+        margin: 0.5em 0; padding: 0.5em 0; border-bottom: 1px solid #ccc
+      }
+</style>
+<script>
+  document.grant_handler = {
+    demo_data: {
+      'action': ['A5:', 'U2:', 'U3:'],
+      'capital': ['A6:', 'A8:', 'A1:'],
+      'arable': ['A5:', 'A6:', 'A8:', 'A1:'],
+      'uplands': ['U2:', 'U3:'],
+      't1': ['A5:', 'U2:', 'A8:', 'U3:', 'A1:'],
+      't2': ['A6:']
+    },
+    updating: false,
+    list_items: () => {
+      if (document.grant_handler.updating) return
+      const enabled_items = [], to_show = []
+      $('div.govuk-checkboxes > div > input:checked').each(function () {
+        enabled_items.push($(this).val())
+      })
+      enabled_items.map((x) => {
+        const check_items = document.grant_handler.demo_data[x]
+        check_items.forEach((item) => {
+          if (!to_show.includes(item)) {
+            to_show.push(item)
+          }
+        })
+        to_show.push[x]
+      })
+      if (to_show.length === 0) {
+        $('ol.guidance-list > li').show()
+      } else {
+        $('ol.guidance-list > li').hide()
+      }
+      to_show.forEach((item) => {
+        $(`ol.guidance-list > li:contains(${item})`).show()
+      })
+    },
+    search_item: (x) => {
+      // Need to do this in a timeout handler to give the autocomplete code time to fill in the search box, or this doesn't get the right value
+      document.grant_handler.updating = true
+      try {
+        $('div.govuk-checkboxes > div > input:checked').attr('checked',false)
+      } catch (error) {
+        document.grant_handler.updating = false
+      }
+      document.grant_handler.updating = false
+      setTimeout(() => {
+        $('ol.guidance-list > li').hide()
+        const item = $('#last-location').val()
+        $(`ol.guidance-list > li:contains(${item})`).show()
+        if ($('ol.guidance-list > li').filter(':visible').length === 0)
+        {
+          $('ol.guidance-list > li').show()
+        }
+      },250)
+      
+    },
+    install_handler: () => {
+      $('div.govuk-checkboxes > div > input').change( document.grant_handler.list_items )
+      $('div.button-wrapper > button.autocomplete').click( () => {return false} )
+      $('#last-location').change( document.grant_handler.search_item )
+    }
+  }
+  window.addEventListener('load', document.grant_handler.install_handler)
+</script>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Find an Environmental Land Management (ELM) action
+      </h1>
+
+      <p>Find actions to include in your application for ELM.</p>
+      <p><a href="#">See information for agreement holders</a> for earlier versions. Check your <a href="#">evidence and record keeping requirements</a> before you apply.</p>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <div class="govuk-form-group">
+
+      <div class="submitted submitted--hidden">
+        <p>You submitted:</p>
+        <ul>
+          <li><code>"last-location": <span class="submitted__last-location"></span></code></li>
+        </ul>
+        <hr />
+      </div>
+
+      <form action="index.html" method="get">
+        <label class="govuk-label" for="last-location">Search</label>
+        <div class="autocomplete-wrapper">
+          <select name="last-location" id="last-location">
+            <option value="">Select an action</option>
+            <option value="A5: Use cover crops">A5: Use cover crops</option>
+            <option value="A6: Create or maintain hill slope tree shelter belts">A6: Create or maintain hillslope tree shelter belts</option>
+            <option value="U2: Fence off water sources from livestock">U2: Fence off water sources from livestock</option>
+            <option value="A8: Increase organic matter in soils">A8: Increase organic matter in soils</option>
+            <option value="U3: Provide drinking water for livestock">U3: Provide drinking water for livestock</option>
+            <option value="A1: Use lower emission fertilisers">A1: Use lower emission fertilisers</option>
+          </select>
+        </div>
+        <div class="button-wrapper">
+          <button type="submit" class="autocomplete">Search</button>
+        </div>
+      </form>
+      <p style="margin: 20px 0 -35px">Filters</p>
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default" style="margin-top: 20px">
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1" style="font-size: 1.2rem; font-weight:100;">
+                Grant type
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+            <div class="govuk-form-group">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="action">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Action / standard
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="capital">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                    Grant item
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2" style="font-size: 1.2rem; font-weight:100;">
+                Land use
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+            <div class="govuk-form-group">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="arable">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Arable land 
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="uplands">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                    Uplands
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-3" style="font-size: 1.2rem; font-weight:100;">
+                Tiers
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+            <div class="govuk-form-group">
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="t1">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Tier 1 
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="t2">
+                  <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                    Tier 2
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="govuk-grid-column-two-thirds">
+      <section class="gem-c-subscription-links ">
+        <ul class="govuk-list" style="text-align: right">
+            <li class="gem-c-subscription-links__list-item gem-c-subscription-links__list-item--small">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" class="gem-c-subscription-links__icon" focusable="false" fill="currentColor" aria-hidden="true"><path d="M1.996 11A2 2 0 0 0 0 12.993c0 1.101.895 1.99 1.996 1.99 1.106 0 2-.889 2-1.99a2 2 0 0 0-2-1.993zM.002 5.097V7.97c1.872 0 3.632.733 4.958 2.059A6.984 6.984 0 0 1 7.015 15h2.888c0-5.461-4.443-9.903-9.9-9.903zM.006 0v2.876c6.676 0 12.11 5.44 12.11 12.124H15C15 6.731 8.273 0 .006 0z"></path></svg>
+              <a class="gem-c-subscription-links__link " href="/countryside-stewardship-grants.atom">Subscribe to feed</a>
+            </li>
+        </ul>
+    </section>
+      <ol class="govuk-list guidance-list">
+        <li><a href="/prototype-guidance/draft-guidance-full/cover-crops-maintain-carbon-storage-reduce-sediment-water-bodies" style=" text-decoration: none;">A5: Use cover crops</a></li>
+        <li><a href="/prototype-guidance/draft-guidance-full/create-maintain-hill-slope-tree-shelter-belts" style=" text-decoration: none">A6: Create or maintain hillslope tree shelter belts</a></li>
+        <li><a href="/prototype-guidance/draft-guidance-full/fence-water-sources-livestock-prevent-erosion-contamination" style=" text-decoration: none">U2: Fence off water sources from livestock</a></li>
+        <li><a href="/prototype-guidance/draft-guidance-full/increase-organic-matter-soils-reduce-wind-erosion" style=" text-decoration: none">A8: Increase organic matter in soils</a></li>
+        <li><a href="/prototype-guidance/draft-guidance-full/provide-drinking-water-livestock-reduce-sediment-water" style=" text-decoration: none">U3: Provide drinking water for livestock</a></li>
+        <li><a href="/prototype-guidance/draft-guidance-full/use-lower-emission-fertilisers-reduce-ammonia-greenhouse-gasses" style=" text-decoration: none">A1: Use lower emission fertilisers</a></li>
+      </ol>
+    </div>
+    <script src="/public/javascripts/accessible-autocomplete.min.js"></script>
+    <script type="text/javascript">
+      var selectEl = document.querySelector('#last-location')
+      accessibleAutocomplete.enhanceSelectElement({
+        autoselect: true,
+        confirmOnBlur: true,
+        defaultValue: "",
+        minLength: 1,
+        selectElement: selectEl
+      })
+
+      var queryStringParameters = window.location.search
+      var previouslySubmitted = queryStringParameters.length > 0
+      if (previouslySubmitted) {
+        var submittedEl = document.querySelector('.submitted')
+        submittedEl.classList.remove('submitted--hidden')
+        var params = new URLSearchParams(document.location.search.split('?')[1])
+        document.querySelector('.submitted__last-location').innerHTML = params.get('last-location')
+      }
+    </script>
+    
+{% endblock %}

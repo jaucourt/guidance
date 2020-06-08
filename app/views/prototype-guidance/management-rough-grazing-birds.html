@@ -1,0 +1,257 @@
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="manage-activity?id=4">Back to activity details</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <span class="govuk-caption-xl">Guidance</span>
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">
+        Management of rough grazing for birds
+      </h1>
+
+      <p class="govuk-body-l">Find out about requirements for the management of rough grazing for birds.</p>
+    </div>
+
+
+
+
+    <div class="govuk-grid-column-two-thirds">
+      <div class="dashboard-main">
+
+        <aside id="contents" class="part-navigation-container" role="complementary" style="border:0">
+          <nav role="navigation" class="gem-c-contents-list  " data-module="track-click" aria-label="Pages in this guide">
+
+            <h2 class="gem-c-contents-list__title govuk-body-s govuk-!-margin-bottom-0">Contents</h2>
+
+            <ol class="gem-c-contents-list__list">
+              <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                <a href="#how-much">How much will be paid</a>
+              </li>
+              <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                <a href="#find">Features that can be included in this option</a>
+              </li>
+              <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                <a href="#environment">How this option will benefit the environment</a>
+              </li>
+              <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                <a href="#requirements">Requirements</a>
+              </li>
+              <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                <a href="#advice">Advice and suggestions for how to carry out this option</a>
+
+                <ol class="gem-c-contents-list__list">
+                  <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                    <a href="#location">Pick the right location</a>
+                  </li>
+                  <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                    <a href="#sites">Sites to avoid</a>
+                  </li>
+                  <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                    <a href="#vegetation">Vegetation management</a>
+                  </li>
+                  <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                    <a href="#wet">Management of wet features (drains, grips, scrapes)</a>
+                  </li>
+                  <li class="gem-c-contents-list__list-item gem-c-contents-list__list-item--dashed">
+                    <a href="#grazing">Grazing</a>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </nav>
+
+        </aside>
+
+
+
+        <h2 id="how-much" class="govuk-heading-l">How much will be paid</h2>
+        <p>£88 per hectare (ha).</p>
+
+
+        <!-- <h2 class="govuk-heading-l">Where to use this option</h2>
+
+        <p>Available for Mid Tier and Higher Tier</p>
+
+        <p>In Mid Tier this option can only be used subject to eligibility checks. The land must be mapped as Upland breeding bird areas for Countryside Stewardship, see MAGIC.</p>
+
+        <p>Whole or part parcel</p>
+
+        <p>Only on permanent grassland parcels of at least 2ha that are within a Less Favoured Area. This includes allotments, intakes, newtakes and semi-improved in-bye that already support (or have the potential to support) breeding waders.</p>
+
+        <p>The applicant must also meet at least one of the following conditions to use this option:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li>follow a recommended fertiliser management system to plan nutrient inputs across the farm</li>
+              <li>adopt a recommended fertiliser management system within 18 months of the start of the agreement</li>
+              <li>qualify as a low intensity farmer</li>
+            </ul> -->
+
+
+
+        <h2 id="features" class="govuk-heading-l">Features that can be included in this option</h2>
+
+        <p>The following features can be included if they are part of the land, even if they are ineligible for the Basic Payment Scheme (BPS):</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li>ditches, dykes, drains, rivers, streams that are less than 4m wide for the majority of their length in the parcel</li>
+              <li>temporary water</li>
+              <li>natural unsurfaced roads, tracks, paths and bridleways, as long as the requirements can still be met</li>
+              <li>bracken</li>
+              <li>areas of scree, rock outcrops and boulders – each area can cover up to 0.1ha</li>
+              <li>permanent water up to 0.1ha</li>
+              <li>grazed woodland and scrub that allows livestock access and has grass underneath</li>
+            </ul>
+
+
+
+        <h2 id="environment" class="govuk-heading-l">How this option will benefit the environment</h2>
+
+        <p>It is for restoring or maintaining upland bird populations. The option brings about water level management and provides the appropriate grassland habitat and sward structure for feeding and nesting.</p>
+
+        <p>If successful there will be rough grassland habitat supporting target species. Where appropriate, a water level management regime may also be in place, including scrapes and foot-drains. The water level management will also have enhanced pools or ditches for aquatic plants, invertebrates and other important species.</p>
+
+
+
+        <h2 id="requirements" class="govuk-heading-l">Requirements</h2>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li>manage the sward by grazing and/or cutting to maintain a varied sward to benefit upland waders by achieving a sward height of less than 5cm over 50% of the parcel area by 15 March</li>
+              <li>only graze in line with an agreed stocking calendar, which includes minimum and maximum stocking rates by grazing animal type by month</li>
+              <li>manage scrub to achieve cover of between 1% and 5% of the parcel</li>
+              <li>manage bracken and make sure bracken litter doesn’t cover more than 25% cover across any area of bracken</li>
+              <li>manage dense rush so that stands of soft or hard rush don’t cover more than 20% of the parcel and the rush height is less than 20cm by 30 September</li>
+              <li>manage field operations to reduce effects on breeding birds</li>
+              <li>manage wet features to provide muddy areas for waders to feed</li>
+            </ul>
+
+        <p>Do not:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li>supplementary feed except for the provision of mineral blocks (non-energy based)</li>
+            </ul>
+
+
+
+
+        <h3 class="govuk-heading-m">Keeping records</h3>
+
+        <p>Agreement holders will need to keep the following records and supply them on request:</p>
+
+            photographs of the extent of bracken on the option area before works start
+            a map of the land drainage system
+            a stocking calendar
+            evidence that a recommended fertiliser management system is used or evidence to support low intensity farmer claim
+            field operations at the parcel level, including associated invoices
+            stock records to show grazing activity on parcels
+            a count of breeding birds in year 5 of the agreement
+
+        <p>On your annual claim you will be asked to declare that you haven’t carried out any activities prohibited by the option requirements.</p>
+
+        <p>You should also be aware that at the start of each claim year, a percentage of agreement holders will be asked to take and submit the following photographic records:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li>photographs of the management undertaken</li>
+            </ul>
+
+        <p>Applicants will have to send the following with their application:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li>a map of the extent of bracken on the option area - this can be marked on any map including the Farm Environment Record (FER)</li>
+            </ul>
+
+
+
+
+        <!-- <h2 class="govuk-heading-l">Related options</h2>
+
+        <p>The following options and supplements can be located on the same area as this option:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a href="">BE3 – Management of hedgerows</a></li>
+              <li><a href="">GS16 – Rush infestation control supplement</a></li>
+              <li><a href="">OR2 – Organic conversion – unimproved permanent grassland</a></li>
+              <li><a href="">OT2 – Organic land management – unimproved permanent grassland</a></li>
+              <li><a href="">OT6 – Organic land management – enclosed rough grazing</a></li>
+              <li><a href="">SP1 – Difficult sites supplement (Higher Tier only)</a></li>
+              <li><a href="">SP2 – Raised water level supplement (Higher Tier only)</a></li>
+              <li><a href="">SP3 – Bracken control supplement (Higher Tier only)</a></li>
+              <li><a href="">SP4 – Control of invasive plant species supplement (Higher Tier only)</a></li>
+              <li><a href="">SP5 – Shepherding supplement (Higher Tier only)</a></li>
+              <li><a href="">SP6 – Cattle grazing supplement</a></li>
+              <li><a href="">SP7 – Introduction of cattle grazing on the Isles of Scilly (Higher Tier only)</a></li>
+              <li><a href="">SP8 – Native breeds at risk supplement (Higher Tier only)</a></li>
+              <li><a href="">SP9 – Threatened species supplement</a></li>
+              <li><a href="">WT3 – Management of ditches of high environmental value</a></li>
+            </ul> -->
+
+
+
+        <h2 id="advice" class="govuk-heading-l">Advice and suggestions for how to carry out this option</h2>
+
+        <h3 id="location" class="govuk-heading-m">Pick the right location</h3>
+        <p>Choose sites that:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li>are open, with any surrounding hedges less than about 2m high</li>
+              <li>experience minimal disturbance (from footpaths or public rights of way)</li>
+              <li>have no overhead pylons or power lines</li>
+              <li>have no in-field trees</li>
+              <li>are not next to woodland</li>
+              <li>have either an existing high water table or surface water attributes (flushes, ditches, foot drains), or where they could be created</li>
+            </ul>
+
+        <h3 id="sites" class="govuk-heading-m">Sites to avoid</h3>
+        <p>Avoid sites that are:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li>steep (above 14:1, or 8 degrees)</li>
+              <li>less than 2ha and bounded by tall (over 2m) hedgerows, scrub or trees</li>
+            </ul>
+
+        <h3 id="vegetation" class="govuk-heading-m">Vegetation management</h3>
+        <p>Tailor vegetation management to the target species - usually a range of vegetation heights is preferred.</p>
+
+        <h3 id="wet" class="govuk-heading-m">Management of wet features (drains, grips, scrapes)</h3>
+        <p>Provide surface wet features from 1 March to 1 June (such as scrapes, flushes, foot drains or surface standing water). At least 50% of the wet features’ edges should have exposed mud at the water’s edge to promote invertebrate activity and allow chicks access to feed.</p>
+        <p>Consider the need to re-profile man-made wet features annually and maintain as required.</p>
+        <p>Any mechanical operations should be scheduled for the driest period of the year (or after mid-August if breeding snipe are present).</p>
+        <p>Manage soft and hard rushes so that they cover no more than 20% of the option land.</p>
+
+        <h3 id="grazing" class="govuk-heading-m">Grazing</h3>
+        <p>Use quiet stock on these sites to avoid unnecessary trampling of nests and chicks.</p>
+        <p>Adequate grazing and appropriate mechanical operations after the breeding season (August to March) are vital to create the desired vegetation mosaic for the following spring.</p>
+        <p>It is important that there is adequate grazing available which is not in breeding bird options to retain flexibility to manage the breeding bird areas correctly during the breeding season.</p>
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- <div class="govuk-grid-column-one-third">
+
+      <div class="app-related-items aside-links">
+        <h2 class="govuk-heading-s">
+          Manage activity
+        </h2>
+
+        <ul class="govuk-list govuk-body-s">
+          <li><a href="#0" class="govuk-link">Change details</a></li>
+          <li><a href="#0" class="govuk-link">Report issue</a></li>
+        </ul>
+      </div>
+
+    </div> -->
+
+
+  </div>
+{% endblock %}

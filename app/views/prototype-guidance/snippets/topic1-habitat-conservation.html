@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Habitat conservation"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-xl">Environmental land management</span>
+      <h1 class="govuk-heading-xl">Habitat conservation</h1>
+
+      <ul class="govuk-list govuk-list--bullet">
+
+      <li><a href="identify-maintain-wildlife-habitats-land">Identify and maintain wildlife habitats</a></li>
+
+      <!--<li><a href="topic3-grassland-management">Grassland management</a></li>-->
+
+      </ul>
+
+    </div>
+  </div>
+{% endblock %}

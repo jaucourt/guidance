@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Habitat conservation",
+        href: "topic1-habitat-conservation"
+      },
+      {
+        text: "Grassland management",
+        href: "topic3-grassland-management"
+      },
+      {
+        text: "Uplands grassland management",
+        href: "topic4-uplands-grassland-management"
+      },
+      {
+        text: "Uplands grassland activities"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-xl">Uplands grassland management</span>
+      <h1 class="govuk-heading-xl">Uplands grassland activities</h1>
+
+        <ul class="govuk-list govuk-list--bullet">
+
+        <li><a href="manage-grassland-grazing-wildlife">Manage grassland grazing for wildlife on your land</a></li>
+
+        <li><a href="create-manage-connected-habitats">Create and manage connected habitats on your land</a></li>
+
+        <li><a href="manage-grassland-mowing-wildlife">Manage grassland mowing for wildlife on your land</a></li>
+
+        <li><a href="monitor-control-damaging-native-plants">Monitor and control damaging native plants on your land</a></li>
+
+        </ul>
+
+    </div>
+  </div>
+{% endblock %}

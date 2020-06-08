@@ -38,6 +38,16 @@ module.exports = function (env) {
 
   ------------------------------------------------------------------ */
 
+    filters.commafy = function(number) {
+      return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    },
+
+    filters.toFixed = function(num, digits) {
+        return parseFloat(num).toFixed(digits);
+    }
+
+
+
   /* ------------------------------------------------------------------
     keep the following line to return your filters to the app
   ------------------------------------------------------------------ */

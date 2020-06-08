@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Habitat conservation",
+        href: "topic1-habitat-conservation"
+      },
+      {
+        text: "Identify species-rich grassland"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-xl">Guidance</span>
+      <h1 class="govuk-heading-xl">Identify species-rich grassland</h1>
+
+      <p class="govuk-body-l">Use this guidance if you have or wish to restore species-rich grassland on your land.</p>
+
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+            <div class="app-c-published-dates " lang="en">
+              <p>Published 26 February 2019
+              <br>
+              From: <a class="govuk-link" href="https://www.gov.uk/government/organisations/natural-england">Natural England</a></p>
+            </div>
+
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <p class="govuk-body">This guidance will help you to decide if your grassland is species-rich. It will also help you to identify which type of species-rich grassland you have. Your actions can help this rare grassland and the species it supports to thrive.</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+
+        <li><a href="manage-purple-moor-grass-rush-pasture">Find out how to manage purple moor grass and rush pasture</a></li>
+
+        <li><a href="manage-upland-hay-meadows">Find out how to manage upland hay meadows</a></li>
+
+        <li><a href="manage-chalk-limestone-grassland-uplands">Find out how to manage chalk and limestone grassland in the uplands</a></li>
+
+      </ul>
+    </div>
+  </div>
+{% endblock %}

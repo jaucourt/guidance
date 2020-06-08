@@ -1,0 +1,235 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  uplands arable ELM actions
+{% endblock %}
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+  <style type="text/css">
+
+      .button-wrapper {
+        width: 1%;position: relative;display: table-cell;vertical-align: top;
+      }
+
+      .search-input {
+        border-right-width: 0;font-size: 19px;
+        line-height: 1.4736842105; font-family: Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.4736842105;
+        padding: 6px;
+        margin: 0;
+        width: 100%;
+        height: 40px;
+        border: 2px solid #0b0c0c;
+        background: #ffffff;
+        border-radius: 0;
+        box-sizing: border-box;
+        -webkit-appearance: none;position: relative;
+        display: table-cell;
+        vertical-align: top;
+        border-right:0;
+      }
+
+      button.search {
+        background-color: #1d70b8;
+        color: #ffffff;background-size: 52.5px auto;
+        background-position: 115% 50%;border: 0;
+        cursor: pointer;
+        border-radius: 0;
+        position: relative;
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        background-image: url(https://assets.publishing.service.gov.uk/finder-frontend/govuk_publishing_components/search-button-ca89b2a79f944909ceb7370d3f0b78811d32b96e883348fcd8886f63dd619585.png);
+        background-repeat: no-repeat;
+        text-indent: -5000px;
+        overflow: hidden;
+      }
+
+      .guidance-list {
+        font-weight: 700; font-size: 19px; margin-top: 20px
+      }
+
+      .guidance-list li {
+        margin: 0.5em 0; padding: 0.5em 0; border-bottom: 1px solid #ccc
+      }
+
+      .guiance-list a, {
+        color: #005ea5;
+        font-size: 19px;
+        line-height: 1.3157894737;
+        display: inline-block;
+      }
+
+      .guidance-list p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 5px 0;
+      }
+
+      .guidance-list ul li {
+        font-size: 14px;
+        border: none;
+        margin-right: 2em
+      }
+
+      .filters {
+        font-weight: 300; font-size: 1.2rem; margin-top:20px
+      }
+
+      .filters li {
+        margin: 0.5em 0; padding: 0.5em 0 1em 0; border-bottom: 1px solid #ccc;
+      }
+
+      .filters li a {
+        text-decoration: none;
+      }
+</style>
+{% endblock %}
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/govuk-search/results" method="get">
+        <label class="govuk-heading-xl" for="full">
+          Search GOV.UK
+        </label>
+        <div style="display: table;width: 100%;background: #ffffff;">
+          <input class="govuk-input govuk-!-width-full search-input" id="full" name="full" type="text" value="uplands arable ELM actions">
+          <div style="width: 1%;position: relative;display: table-cell;vertical-align: top;">
+            <button type="submit" class="search">Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <ol class="govuk-list filters">
+        <li><a href="#">Topic</a></li>
+        <li><a href="#">Show only</a></li>
+        <li><a href="#">Organisation</a></li>
+        <li><a href="#">World location</a></li>
+        <li><a href="#">Date</a></li>
+      </ol>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <section class="gem-c-subscription-links" style="margin: 40px 0 0">
+        <span class="govuk-body" style="display: inline;">6 results</span>
+        <hr style="clear: all;">
+        <div class="govuk-form-group sort-options" style="margin: 20px 0 0">
+          <ul class="govuk-list" style="float: right; margin: 10px 0 0 ">
+            <li class="gem-c-subscription-links__list-item gem-c-subscription-links__list-item--small">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" class="gem-c-subscription-links__icon" focusable="false" fill="currentColor" aria-hidden="true"><path d="M1.996 11A2 2 0 0 0 0 12.993c0 1.101.895 1.99 1.996 1.99 1.106 0 2-.889 2-1.99a2 2 0 0 0-2-1.993zM.002 5.097V7.97c1.872 0 3.632.733 4.958 2.059A6.984 6.984 0 0 1 7.015 15h2.888c0-5.461-4.443-9.903-9.9-9.903zM.006 0v2.876c6.676 0 12.11 5.44 12.11 12.124H15C15 6.731 8.273 0 .006 0z"></path></svg>
+              <a class="gem-c-subscription-links__link " href="/countryside-stewardship-grants.atom">Subscribe to feed</a>
+            </li>
+        </ul>
+          <label for="order" style="display: inline" class="govuk-body-s">Sort by</label>
+          <select class="js-order-results govuk-select sort-options__select" name="order" id="order" aria-controls="js-search-results-info" data-default-sort-option="relevance" data-relevance-sort-option="relevance" data-module="track-select-change">
+              <option value="most-viewed" disabled="" data-track-category="dropDownClicked" data-track-action="clicked" data-track-label="Most viewed">Most viewed</option>
+              <option value="relevance" selected="" data-track-category="dropDownClicked" data-track-action="clicked" data-track-label="Relevance">Relevance</option>
+              <option value="updated-newest" data-track-category="dropDownClicked" data-track-action="clicked" data-track-label="Updated (newest)">Updated (newest)</option>
+              <option value="updated-oldest" data-track-category="dropDownClicked" data-track-action="clicked" data-track-label="Updated (oldest)">Updated (oldest)</option>
+          </select>
+        </div>
+        
+      </section>
+        <ol class="govuk-list guidance-list">
+          <li><a href="/prototype-guidance/draft-guidance-full/cover-crops-maintain-carbon-storage-reduce-sediment-water-bodies" style=" text-decoration: none;">A5: Use cover crops</a>
+            <p>
+              Find out what you need to do to maintain carbon storage and reduce sediment in water bodies by planting cover crops.
+            </p>
+            <ul class="gem-c-document-list__item-metadata">
+              <li class="gem-c-document-list__attribute">
+                From: Environmental Land Management and 1 others
+              </li>
+              <li class="gem-c-document-list__attribute">
+                  Updated: <time datetime="2020-02-11">18 February 2020</time>
+              </li>
+            </ul>
+          </li>
+          <li><a href="/prototype-guidance/draft-guidance-full/create-maintain-hill-slope-tree-shelter-belts" style=" text-decoration: none">A6: Create or maintain hill slope tree shelter belts</a>
+            <p>
+              Find out how to create or maintain a shelter belt of trees on hill slopes to protect land from flooding.
+            </p>
+            <ul class="gem-c-document-list__item-metadata">
+              <li class="gem-c-document-list__attribute">
+                From: Environmental Land Management and 1 others
+              </li>
+              <li class="gem-c-document-list__attribute">
+                  Updated: <time datetime="2020-02-11">18 February 2020</time>
+              </li>
+            </ul>
+          </li>
+          <li><a href="/prototype-guidance/draft-guidance-full/fence-water-sources-livestock-prevent-erosion-contamination" style=" text-decoration: none">U2: Fence off water sources from livestock</a>
+            <p>
+              You can fence off rivers, streams, lakes and ponds from livestock to protect environmental features and help manage habitats.
+            </p>
+            <ul class="gem-c-document-list__item-metadata">
+              <li class="gem-c-document-list__attribute">
+                From: Environmental Land Management and 1 others
+              </li>
+              <li class="gem-c-document-list__attribute">
+                  Updated: <time datetime="2020-02-11">18 February 2020</time>
+              </li>
+            </ul>
+          </li>
+          <li><a href="/prototype-guidance/draft-guidance-full/increase-organic-matter-soils-reduce-wind-erosion" style=" text-decoration: none">A8: Increase organic matter in soils</a>
+            <p>
+              Find out what you need to do to reduce wind erosion by increasing organic matter in soils.
+            </p>
+            <ul class="gem-c-document-list__item-metadata">
+              <li class="gem-c-document-list__attribute">
+                From: Environmental Land Management and 1 others
+              </li>
+              <li class="gem-c-document-list__attribute">
+                  Updated: <time datetime="2020-02-11">18 February 2020</time>
+              </li>
+            </ul>
+          </li>
+          <li><a href="/prototype-guidance/draft-guidance-full/provide-drinking-water-livestock-reduce-sediment-water" style=" text-decoration: none">U3: Provide drinking water for livestock</a>
+            <p>
+              Provide livestock with troughs, pasture pumps, ram pumps, and their associated pipework as an alternative to drinking from a watercourse.
+            </p>
+            <ul class="gem-c-document-list__item-metadata">
+              <li class="gem-c-document-list__attribute">
+                From: Environmental Land Management and 1 others
+              </li>
+              <li class="gem-c-document-list__attribute">
+                  Updated: <time datetime="2020-02-11">18 February 2020</time>
+              </li>
+            </ul>
+          </li>
+          <li><a href="/prototype-guidance/draft-guidance-full/use-lower-emission-fertilisers-reduce-ammonia-greenhouse-gasses" style=" text-decoration: none">A1: Use lower emission fertilisers</a>
+            <p>
+              Find out how to reduce ammonia and greenhouse gas emissions by using lower emission fertilisers on your land.
+            </p>
+            <ul class="gem-c-document-list__item-metadata">
+              <li class="gem-c-document-list__attribute">
+                From: Environmental Land Management and 1 others
+              </li>
+              <li class="gem-c-document-list__attribute">
+                  Updated: <time datetime="2020-02-11">18 February 2020</time>
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <ul class="govuk-list" style="margin: 80px 0">
+            <li class="gem-c-subscription-links__list-item gem-c-subscription-links__list-item--small">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" class="gem-c-subscription-links__icon" focusable="false" fill="currentColor" aria-hidden="true"><path d="M1.996 11A2 2 0 0 0 0 12.993c0 1.101.895 1.99 1.996 1.99 1.106 0 2-.889 2-1.99a2 2 0 0 0-2-1.993zM.002 5.097V7.97c1.872 0 3.632.733 4.958 2.059A6.984 6.984 0 0 1 7.015 15h2.888c0-5.461-4.443-9.903-9.9-9.903zM.006 0v2.876c6.676 0 12.11 5.44 12.11 12.124H15C15 6.731 8.273 0 .006 0z"></path></svg>
+              <a class="gem-c-subscription-links__link " href="/countryside-stewardship-grants.atom">Subscribe to feed</a>
+            </li>
+        </ul>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full" style="background: #1d70b8; padding: 2em 2em 1em 2em; margin: 0 0 -40px 0">
+        <p style="display: inline; color: white; font-weight: bold">Is this page useful? <a href="#" style="color: white; margin: 0 2em">Yes</a> <a href="#" style="color: white">No</a></p>
+        <p style="display: inline; float: right;color:white">Is there anything wrong with this page?</p>
+      </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,322 @@
+{#  set result = "#" #}
+{#  set google = "#" #}
+
+{% extends "layout_unbranded.html" %}
+
+{% block page_title %}
+  Search page
+{% endblock %}
+
+{% block head %}
+<link href="/public/stylesheets/unbranded.css" media="screen" rel="stylesheet" type="text/css">
+
+<style>
+
+#content {
+  font-size: 13px;
+}
+
+#content {
+  font-size: 13px;
+}
+
+#content h3 {
+  font-size: 18px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#global-header, #global-header .header-wrapper {
+      background-color: #fafafa;
+    border-bottom: 1px solid #ebebeb;
+  }
+
+#global-header .header-proposition #proposition-links a{
+  color: black;
+  font-weight: normal;
+}
+
+@media (min-width: 769px) {
+#global-header.with-proposition .header-wrapper .header-global {
+    width: 25%;
+}}
+
+.ads-visurl, .visurl {
+    color: #006621 !important;
+    white-space: nowrap;
+    font-size: 14px !important;
+    padding: 0;
+    margin: 5px 0;
+}
+
+
+.ads-visurl .ad {
+  margin-left: 0px;
+  background-color: #fff;
+  border-radius: 3px;
+  color: #006621;
+  display: inline-block;
+  font-size: 11px;
+  border: 1px solid #006621 ;
+  padding: 1px 3px 0 2px;
+  line-height: 11px;
+  vertical-align: baseline;
+}
+
+.hint {
+      color: #808080;
+}
+
+.google-button:hover {
+    border:1px solid #ccc;
+    box-shadow: 0px 1px 2px #ccc;
+  }
+
+.google-search {
+  width: 100%; max-width: 632px; margin: 10px; line-height: 34px; border-radius: 30px; border:1px solid; background: #fff; display: flex; border-radius: 8px; border: 1px solid #dfe1e5; border-radius: 24px; height: 44px; width: 482px; font-size: 18px; padding-left:1em;
+}
+
+.google-search:hover {
+  box-shadow: 0px 2px 4px #ccc;
+}
+
+.visually-hidden {
+  display: none
+}
+
+.logo {
+  margin: 20px; display: block; width:140px; float: left
+}
+
+#proposition-links li {
+  list-style: none; display: inline-block; padding: 16px 12px 12px 10px; margin-top: 0;
+}
+
+.govuk-main-wrapper {
+  padding-top:0;
+}
+
+fieldset {
+  border:none;
+}
+
+</style>
+
+
+{% endblock %}
+
+{% block content %}
+
+<header role="banner" id="global-header" class="with-proposition">
+
+  <div class="header-wrapper">
+
+    <div class="header-global">
+
+      <div class="header-logo">
+        <a href="{% if google %}{{google}}{% else %}_GOOGLE{% endif %}"><img src="{{asset_path}}images/google.png" class="logo" height="44" width="120" alt="Google" /></a>
+      </div>
+
+    </div>
+    <div class="header-proposition">
+
+      <div class="content">
+        <nav id="proposition-menu">
+
+          <form action="{% if result %}{{result}}{% else %}_GOOGLERESULTS{% endif %}" method="post" class="form" >
+            <div class="form-group" style="margin-bottom: 0;">
+              <fieldset>
+                <legend class="visually-hidden">Search for a result</legend>
+                <label class="visually-hidden" for="google-search">Search for a result</label>
+                <input class="google-search form-control" id="google-search" name="google-search" type="text" value="{{data['google-search']}}">
+              </fieldset>
+            </div>
+          </form>
+
+          <ul id="proposition-links">
+            <li><a href="#" style="font-weight: bold;">All</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">Images</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Books</a></li>
+            <li><a href="#">More</a></li>
+          </ul>
+
+        </nav>
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+
+    <div class="column-one-quarter">
+      <p>&nbsp;</p>
+    </div>
+
+      <div class="column-two-thirds">
+      <p class="hint"> About 20,500,000 results (0.38 seconds)</p>
+
+
+      <!-- Ad results -->
+
+      <!--
+
+      <div class="result" >
+        <h3><a href="#"></a></h3>
+        <p class="ads-visurl"><span class="ad">Ad</span> </p>
+        <p></p>
+      </div>
+
+       -->
+
+
+
+      <!-- Non-ad results -->
+
+
+
+      <div class="result">
+        <h3><a href="../tier1-v2">Apply for Environmental Land Management (ELM) - GOV.UK</a></h3>
+        <p class="visurl">https://www.gov.uk › guidance › cover-crops-maintain-carbon-storage-reduce-sedime...</p>
+        <p>Use this service to apply for ELM and find out what payments you will get.</p>
+      </div>
+
+      <!-- <div class="result">
+        <h3><a href="https://extension.unh.edu/FWT/tafw/ManagingRestoringLandforWildlife.htm">Manage and Restore Wildlife Habitats - UNH Extension</a></h3>
+        <p class="visurl">https://extension.unh.edu › tafw › ManagingRestoringLandforWildlife</p>
+        <p>Habitat Management: Some habitats require periodic natural disturbances to <b>maintain their</b> unique characteristics. By “managing” the land, we can often mimic ...</p>
+      </div> -->
+
+      <div class="result">
+        <h3><a href="../prototype-guidance/draft-guidance-full/cover-crops-maintain-carbon-storage-reduce-sediment-water-bodies">A5: Use cover crops to maintain carbon storage and reduce ... - GOV.UK</a></h3>
+        <p class="visurl">https://www.gov.uk › guidance › cover-crops-maintain-carbon-storage-reduce-sedime...</p>
+        <p>25 Feb 2020 - Find out what you need to do to maintain carbon storage and reduce sediment in water bodies by planting cover crops.</p>
+      </div>
+
+      <!-- <div class="result">
+        <h3><a href="https://www.nationaltrust.org.uk/news/our-plan-to-restore-nature-at-our-places">Our plan to restore nature at our places | National Trust</a></h3>
+        <p class="visurl">https://www.nationaltrust.org.uk › news › our-plan-to-restore-nature-at-our...</p>
+        <p>20 Mar 2017 - The National Trust was set up to protect places of natural beauty, and we plan to create and restore 'priority' wildlife habitats on 10 per cent of our land. They include habitats like chalk grassland and arable field margins - hand-picked by government as threatened and in need of help.</p>
+      </div> -->
+
+      <div class="result">
+        <h3><a href="../grant-finder">Environmental Land Management (ELM) action finder - GOV.UK</a></h3>
+        <p class="visurl">https://www.gov.uk › guidance › cover-crops-maintain-carbon-storage-reduce-sedime...</p>
+        <p>Find information about ELM actions, grants and supplements</p>
+      </div>
+
+      <!-- <div class="result">
+        <h3><a href="https://en.wikipedia.org/wiki/Habitat_conservation">Habitat conservation - Wikipedia</a></h3>
+        <p class="visurl">https://en.wikipedia.org › wiki › Habitat_conservation</p>
+        <p>Habitat conservation is a management practice that seeks to conserve, protect and restore ... The value of land was limited only to the resources it provided such as fertile soil, timber, and minerals. Throughout the ... Habitat conservation is important in maintaining biodiversity, an essential part of global food security. There is ...</p>
+      </div> -->
+
+      <div class="result">
+        <h3><a href="../prototype-guidance/draft-guidance-full/create-maintain-hill-slope-tree-shelter-belts">A6: Create or maintain hill slope tree shelter belts to reduce f ... - GOV.UK</a></h3>
+        <p class="visurl">https://www.gov.uk › guidance › cover-crops-maintain-carbon-storage-reduce-sedime...</p>
+        <p>25 Feb 2020 - Find out how to create or maintain a shelter belt of trees on hill slopes to protect land from flooding.</p>
+      </div>
+
+      <!-- <div class="result">
+        <h3><a href="https://edis.ifas.ufl.edu/uw218">Improving, Restoring, and Managing Wildlife Habitat in Florida</a></h3>
+        <p class="visurl">https://edis.ifas.ufl.edu › ...</p>
+        <p>In Florida, roughly 50% of the rural land area is held in private ownership and ... on specific management actions needed to maintain or restore wildlife habitat.</p>
+      </div> -->
+
+      <div class="result">
+        <h3><a href="../prototype-guidance/draft-guidance-full/fence-water-sources-livestock-prevent-erosion-contamination">U2: Fence off water sources from livestock to prevent erosio ... - GOV.UK</a></h3>
+        <p class="visurl">https://www.gov.uk › guidance › fence-water-sources-livestock-prevent-erosion-cont...</p>
+        <p>25 Feb 2020 - Find out how to fence off rivers, streams, lakes and ponds from livestock to protect environmental features and help manage habitats.</p>
+      </div>
+
+      <!-- <div class="result">
+        <h3><a href="https://elm-prototype.herokuapp.com/prototype-guidance/identify-maintain-wildlife-habitats-land">Identify and maintain wildlife habitats on your land</a></h3>
+        <p class="visurl">https://www.gov.uk > Environmental land management > Habitat conservation</p>
+        <p>Use this guidance to help you identify and understand the habitats on your land. Learn about how to restore or maintain these habitats. Find out which wildlife could be living on your land, and how you can help it to thrive.</p>
+      </div> -->
+
+      <div class="result">
+        <h3><a href="https://www.theguardian.com/national-trust-management-roles/2019/may/24/national-trust-new-roles-announced-to-help-restore-habitats">National Trust: new roles announced to help restore habitats ...</a></h3>
+        <p class="visurl">https://www.theguardian.com › national-trust-management-roles › may › n...</p>
+        <p>24 May 2019 - The National Trust is committed to restoring land to nature, both by ... to care for woodlands, enhance its flagship properties and maintain ...</p>
+      </div>
+
+      <div class="result">
+        <h3><a href="../prototype-guidance/draft-guidance-full/increase-organic-matter-soils-reduce-wind-erosion">A8: Increase organic matter in soils to reduce wind erosion - GOV.UK</a></h3>
+        <p class="visurl">https://www.gov.uk › guidance › increase-organic-matter-soils-reduce-wind-erosion</p>
+        <p>25 Feb 2020 - Find out what you need to do to reduce wind erosion by increasing organic matter in soils.</p>
+      </div>
+
+      <!-- <div class="result">
+        <h3><a href="https://www.encyclopedia.com/science/news-wires-white-papers-and-books/habitat-restoration">Habitat Restoration | Encyclopedia.com</a></h3>
+        <p class="visurl">https://www.encyclopedia.com › news-wires-white-papers-and-books › ha...</p>
+        <p>Habitat Restoration The human race is in a precarious situation as a result of its ... Humans must balance their current resource needs with the future land-use ... With careful planning, healthy habitats can be maintained for people as well as ...</p>
+      </div> -->
+
+      <div class="result">
+        <h3><a href="../prototype-guidance/draft-guidance-full/provide-drinking-water-livestock-reduce-sediment-water">U3: Provide drinking water for livestock to reduce the amou ... - GOV.UK</a></h3>
+        <p class="visurl">https://www.gov.uk › guidance › provide-drinking-water-livestock-reduce-sediment-w...</p>
+        <p>25 Feb 2020 - Find out how to reduce sediment in water bodies by providing livestock with troughs, pasture pumps, ram pumps, and associated pipework.</p>
+      </div>
+
+      <!-- <div class="result">
+        <h3><a href="https://forestryandland.gov.scot/learn/habitats/open-habitats/blanket-bog">Blanket bog restoration - Forestry and Land Scotland</a></h3>
+        <p class="visurl">https://forestryandland.gov.scot › conservation › habitats › open-habitats › b...</p>
+        <p>It is rarely found elsewhere, which is why it is so important to preserve and ... The trees dried out the peat, changing the habitat and destroying its value for birds ...</p>
+      </div> -->
+
+      <div class="result">
+        <h3><a href="https://www.nature.com/scitable/knowledge/library/restoration-ecology-13339059">Restoration Ecology | Learn Science at Scitable - Nature</a></h3>
+        <p class="visurl">https://www.nature.com › scitable › knowledge › library › restoration-ecolog...</p>
+        <p>Habitat enhancement- the process of increasing the suitability of a site as ... restoration efforts are designed to maintain a desirable human-derived state, such as ... The idea of restoring the land dates back centuries, but modern restoration ...</p>
+      </div>
+
+      <div class="result">
+        <h3><a href="../prototype-guidance/draft-guidance-full/use-lower-emission-fertilisers-reduce-ammonia-greenhouse-gasses">A1: Use lower emission fertilisers to reduce ammonia and  ... - GOV.UK</a></h3>
+        <p class="visurl">https://www.gov.uk › guidance › use-lower-emission-fertilisers-reduce-ammonia-gr...</p>
+        <p>25 Feb 2020 - Find out how to reduce ammonia and greenhouse gas emissions by using lower emission fertilisers on your land.</p>
+      </div>
+
+      <!-- <div class="result">
+        <h3><a href="https://www.gov.uk/guidance/providing-and-protecting-habitat-for-wild-birds">Providing and protecting habitat for wild birds - GOV.UK</a></h3>
+        <p class="visurl">https://www.gov.uk › guidance › providing-and-protecting-habitat-for-wil...</p>
+        <p>25 Feb 2016 - How to support wild birds by protecting their habitat and avoiding ... restoring and maintaining habitat, and advice on land management ...</p>
+      </div> -->
+
+
+
+      <!--
+
+      <div class="result" >
+        <h3><a href="#"></a></h3>
+        <p class="visurl"></p>
+        <p></p>
+      </div>
+
+       -->
+
+
+
+
+      <img src="/public/images/google-results.png" height="100" style="display: block; margin: 10px auto;" alt="Google">
+    </div>
+  </div>
+  <ul>
+    <li>
+      <a href="/prototype-admin/clear-data">Clear data</a>
+    </li>
+  </ul>
+</main>
+
+
+
+{% endblock %}
+
+
+<!-- Results returned from query "grass options for land managers" -->
