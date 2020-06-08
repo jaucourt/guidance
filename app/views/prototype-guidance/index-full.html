@@ -1,0 +1,48 @@
+
+{% extends "layout.html" %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="../index">Back to main index</a>
+{% endblock %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <span class="govuk-caption-xl">Environmental Land Management</span>
+      <h1 class="govuk-heading-xl">
+        Prototyped guidance
+      </h1>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+
+      <h2 class="govuk-heading-l">Guidance for 18 March 2020</h2>
+      <p>Taken from the ELM action list provided by JLP</p>
+
+      <p><a href="draft-guidance-full/cover-crops-maintain-carbon-storage-reduce-sediment-water-bodies">Use cover crops to maintain carbon storage and reduce sediment in water bodies</a></p>
+
+      <p><a href="draft-guidance-full/increase-organic-matter-soils-reduce-wind-erosion">Increase organic matter in soils to reduce wind erosion</a></p>
+
+      <p><a href="draft-guidance-full/provide-drinking-water-livestock-reduce-sediment-water#keeping-records">Provide drinking water for livestock to reduce the amount of sediment in water bodies</a></p>
+
+      <p><a href="draft-guidance-full/use-lower-emission-fertilisers-reduce-ammonia-greenhouse-gasses">Use lower emission fertilisers to reduce ammonia and greenhouse gas emissions</a></p>
+
+      <p><a href="draft-guidance-full/fence-water-sources-livestock-prevent-erosion-contamination">Fence off water sources from livestock to prevent erosion and contamination</a></p>
+
+      <p><a href="draft-guidance-full/create-maintain-hill-slope-tree-shelter-belts">Create or maintain hill slope tree shelter belts to reduce flooding</a></p>
+
+      
+      
+
+    </div>
+</div>
+
+{% endblock %}
