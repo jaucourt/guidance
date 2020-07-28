@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Habitat conservation",
+        href: "topic1-habitat-conservation"
+      },
+      {
+        text: "Grassland management",
+        href: "topic3-grassland-management"
+      },
+      {
+        text: "Uplands grassland management"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-xl">Grassland management</span>
+      <h1 class="govuk-heading-xl">Uplands grassland management</h1>
+
+      <ul class="govuk-list govuk-list--bullet">
+
+      <li><a href="manage-purple-moor-grass-rush-pasture">Manage purple moor grass and rush pasture</a></li>
+
+      <li><a href="manage-upland-hay-meadows">Manage upland hay meadows</a></li>
+
+      <li><a href="manage-chalk-limestone-grassland-uplands">Manage chalk and limestone grassland in the uplands</a></li>
+
+      <!--<<li><a href="topic5-uplands-grassland-activities">Uplands grassland activities</a></li>-->
+
+      </ul>
+
+    </div>
+  </div>
+{% endblock %}

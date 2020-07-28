@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Identify and maintain wildlife habitats on your land"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-xl">Guidance</span>
+      <h1 class="govuk-heading-xl">Identify and maintain wildlife habitats on your land</h1>
+
+      <p class="govuk-body-l">Use this guidance to help you identify and understand the habitats on your land. Learn about how to restore or maintain these habitats. Find out what wildlife could be living on your land, and how you can help it to thrive.</p>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <div class="app-c-published-dates " lang="en">
+        <p>Published 26 February 2019
+        <br>
+        From: <a class="govuk-link" href="https://www.gov.uk/government/organisations/natural-england">Natural England</a></p>
+
+      </div>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <ul class="govuk-list govuk-list--bullet">
+
+        <li><a href="identify-species-rich-grassland">Find out how to create species-rich grassland</a></li>
+
+      </ul>
+    </div>
+  </div>
+{% endblock %}

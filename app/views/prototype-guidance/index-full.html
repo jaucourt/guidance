@@ -1,0 +1,160 @@
+
+{% extends "layout.html" %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="../index">Back to main index</a>
+{% endblock %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <span class="govuk-caption-xl">Environmental Land Management</span>
+      <h1 class="govuk-heading-xl">
+        Prototyped guidance
+      </h1>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+
+      <!-- <h2 class="govuk-heading-l">Full guidance notes for National Pilot</h2> -->
+
+      <table class="govuk-table">
+          <caption class="govuk-table__caption">Content-designed notes</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header app-custom-class" scope="col">CD</th>
+              <th class="govuk-table__header app-custom-class" scope="col">Writer</th>
+              <th class="govuk-table__header app-custom-class" scope="col">Guidance note</th>
+              <th class="govuk-table__header app-custom-class" scope="col">Level</th>
+              <th class="govuk-table__header app-custom-class" scope="col">Prototyped</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__cell" scope="row">LG</th>
+              <th class="govuk-table__cell" scope="row"></th>
+              <td class="govuk-table__cell"><a href="guidance-full/S060B-clear-rubbish-caves">S060B: Clear rubbish from caves</a></td>
+              <td class="govuk-table__cell">Action</td>
+              <td class="govuk-table__cell">8 June 2020</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th class="govuk-table__cell" scope="row">DV</th>
+              <th class="govuk-table__cell" scope="row"></th>
+              <td class="govuk-table__cell"><a href=""></a></td>
+              <td class="govuk-table__cell"></td>
+              <td class="govuk-table__cell"></td>      
+            </tr>
+            <tr class="govuk-table__row">
+              <th class="govuk-table__cell" scope="row">EB</th>
+              <th class="govuk-table__cell" scope="row"></th>
+              <td class="govuk-table__cell"><a href="guidance-full/S077a-undertake-assessment-land-vulnerability">S077a: Undertake assessment land vulnerability</a></td>
+              <td class="govuk-table__cell"></td>
+              <td class="govuk-table__cell"></td>      
+            </tr>
+            <tr class="govuk-table__row">
+              <th class="govuk-table__cell" scope="row">IW</th>
+              <th class="govuk-table__cell" scope="row"></th>
+              <td class="govuk-table__cell"><a href=""></a></td>
+              <td class="govuk-table__cell"></td>
+              <td class="govuk-table__cell"></td>      
+            </tr>
+            <!-- <tr class="govuk-table__row">
+              <th class="govuk-table__cell" scope="row"></th>
+              <td class="govuk-table__cell"><a href=""></a></td>
+              <td class="govuk-table__cell"></td>
+              <td class="govuk-table__cell"></td>      
+            </tr> -->
+          </tbody>
+        </table>
+
+
+        <table class="govuk-table">
+          <caption class="govuk-table__caption">Non content-designed notes</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header app-custom-class" scope="col">Writer</th>
+              <th class="govuk-table__header app-custom-class" scope="col">Guidance note</th>
+              <th class="govuk-table__header app-custom-class" scope="col">Level</th>
+              <th class="govuk-table__header app-custom-class" scope="col">Prototyped</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__cell" scope="row"></th>
+              <td class="govuk-table__cell"><a href="guidance-full/S011C-supplementary-winter-bird-feeding">S011C: Supplementary winter bird feeding</a></td>
+              <td class="govuk-table__cell"></td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+          </tbody>
+        </table>
+
+
+        <table class="govuk-table">
+          <caption class="govuk-table__caption">Guidance for 18 March 2020 from JLP's action list</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header app-custom-class" scope="col">CD</th>
+              <th class="govuk-table__header app-custom-class" scope="col">Guidance note</th>
+              <th class="govuk-table__header app-custom-class" scope="col">Level</th>
+              <th class="govuk-table__header app-custom-class" scope="col">Prototyped</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__cell" scope="row"><a href=""></a></th>
+              <td class="govuk-table__cell"><a href="drafts/cover-crops-maintain-carbon-storage-reduce-sediment-water-bodies">Use cover crops to maintain carbon storage and reduce sediment in water bodies</a></td>
+              <td class="govuk-table__cell">Action</td>
+              <td class="govuk-table__cell">6 March 2020</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th class="govuk-table__cell" scope="row"><a href=""></a></th>
+              <td class="govuk-table__cell"><a href="drafts/increase-organic-matter-soils-reduce-wind-erosion">Increase organic matter in soils to reduce wind erosion</a></td>
+              <td class="govuk-table__cell">Action</td>
+              <td class="govuk-table__cell">6 March 2020</td>      
+            </tr>
+            <tr class="govuk-table__row">
+              <th class="govuk-table__cell" scope="row"><a href=""></a></th>
+              <td class="govuk-table__cell"><a href="drafts/provide-drinking-water-livestock-reduce-sediment-water">Provide drinking water for livestock to reduce the amount of sediment in water bodies</a></td>
+              <td class="govuk-table__cell">Action</td>
+              <td class="govuk-table__cell">6 March 2020</td>         
+            </tr>
+            <tr class="govuk-table__row">
+              <th class="govuk-table__cell" scope="row"><a href=""></a></th>
+              <td class="govuk-table__cell"><a href="drafts/use-lower-emission-fertilisers-reduce-ammonia-greenhouse-gasses">Use lower emission fertilisers to reduce ammonia and greenhouse gas emissions</a></td>
+              <td class="govuk-table__cell">Action</td>
+              <td class="govuk-table__cell">6 March 2020</td>          
+            </tr>
+            <tr class="govuk-table__row">
+              <th class="govuk-table__cell" scope="row"><a href=""></a></th>
+              <td class="govuk-table__cell"><a href="drafts/fence-water-sources-livestock-prevent-erosion-contamination">Fence off water sources from livestock to prevent erosion and contamination</a></td>
+              <td class="govuk-table__cell">Action</td>
+              <td class="govuk-table__cell">6 March 2020</td>          
+            </tr>
+            <tr class="govuk-table__row">
+              <th class="govuk-table__cell" scope="row"><a href=""></a></th>
+              <td class="govuk-table__cell"><a href="drafts/create-maintain-hill-slope-tree-shelter-belts">Create or maintain hill slope tree shelter belts to reduce flooding</a></td>
+              <td class="govuk-table__cell">Action</td>
+              <td class="govuk-table__cell">6 March 2020</td>          
+            </tr>
+            <!-- <tr class="govuk-table__row">
+              <th class="govuk-table__cell" scope="row"><a href=""></a></th>
+              <td class="govuk-table__cell"><a href=""></a></td>
+              <td class="govuk-table__cell"></td>
+              <td class="govuk-table__cell"><a href=""></a></td>  -->         
+            </tr>
+          </tbody>
+        </table>      
+      
+
+    </div>
+</div>
+
+{% endblock %}

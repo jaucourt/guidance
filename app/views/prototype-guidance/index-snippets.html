@@ -1,0 +1,109 @@
+
+{% extends "layout.html" %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="../index">Back to main index</a>
+{% endblock %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <span class="govuk-caption-xl">Environmental land management</span>
+      <h1 class="govuk-heading-xl">Guidance snippets for user research</h1>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+
+      <p class='govuk-body-l'>Provided by Natural England in September 2019. Prototyped for use in DDTS user research.</p>
+
+      <!-- {{ govukButton({
+              text: "Access thriving plants and wildlife guidance",
+              href: "restore-maintain-habitats-on-your-land"
+            }) }}
+
+      {{ govukButton({
+              text: "Access beauty, heritage and engagement guidance",
+              href: "preserving-designated-undesignated-cultural-heritage-assets-on-land"
+            }) }} -->
+
+      <table class="govuk-table">
+          <caption class="govuk-table__caption">Thriving plants and wildlife</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header app-custom-class" scope="col">Level 1</th>
+              <th class="govuk-table__header app-custom-class" scope="col">Level 2</th>
+              <th class="govuk-table__header app-custom-class" scope="col">Level 3</th>
+              <th class="govuk-table__header app-custom-class" scope="col">Level 4</th>
+              <th class="govuk-table__header app-custom-class" scope="col">Level 5</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell" scope="row"><a href="snippets/identify-maintain-wildlife-habitats-land">Identify and maintain wildlife habitats on your land</a></td>
+              <td class="govuk-table__cell"><a href=""></a></td>
+              <td class="govuk-table__cell"><a href="snippets/identify-species-rich-grassland">Identify species-rich grassland</a></td>
+              <td class="govuk-table__cell"><a href="snippets/manage-purple-moor-grass-rush-pasture">Manage purple moor grass and rush pasture</a></td>
+              <td class="govuk-table__cell"><a href="snippets/manage-grassland-grazing-wildlife">Manage grassland grazing for wildlife on your land</a></td>            
+            </tr>
+            <tr class="govuk-table__row">
+              <th class="govuk-table__cell" scope="row"><a href=""></a></th>
+              <td class="govuk-table__cell"><a href=""></a></td>
+              <td class="govuk-table__cell"><a href=""></a></td>
+              <td class="govuk-table__cell"><a href="snippets/manage-upland-hay-meadows">Manage upland hay meadows</a></td>
+              <td class="govuk-table__cell"><a href="snippets/create-manage-connected-habitats">Create and manage connected habitats on your land</a></td>            
+            </tr>
+            <tr class="govuk-table__row">
+              <th class="govuk-table__cell" scope="row"><a href=""></a></th>
+              <td class="govuk-table__cell"><a href=""></a></td>
+              <td class="govuk-table__cell"><a href=""></a></td>
+              <td class="govuk-table__cell"><a href="snippets/manage-chalk-limestone-grassland-uplands">Manage chalk and limestone grassland in the uplands</a></td>
+              <td class="govuk-table__cell"><a href="snippets/manage-grassland-mowing-wildlife">Manage grassland mowing for wildlife on your land</a></td>            
+            </tr>
+            <tr class="govuk-table__row">
+              <th class="govuk-table__cell" scope="row"><a href=""></a></th>
+              <td class="govuk-table__cell"><a href=""></a></td>
+              <td class="govuk-table__cell"><a href=""></a></td>
+              <td class="govuk-table__cell"><a href=""></a></td>
+              <td class="govuk-table__cell"><a href="snippets/monitor-control-damaging-native-plants">Monitor and control damaging native plants on your land</a></td>            
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="govuk-table">
+          <caption class="govuk-table__caption">Beauty, heritage and engagement</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th class="govuk-table__header app-custom-class" scope="col">Level 1</th>
+              <th class="govuk-table__header app-custom-class" scope="col">Level 2</th>
+              <th class="govuk-table__header app-custom-class" scope="col">Level 3</th>
+              <th class="govuk-table__header app-custom-class" scope="col">Level 4</th>
+              <th class="govuk-table__header app-custom-class" scope="col">Level 5</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell" scope="row"><a href="snippets/preserve-cultural-heritage-assets">Preserve cultural heritage assets on your land</a></td>
+              <td class="govuk-table__cell"><a href="snippets/identify-improve-cultural-heritage-assets">Identify and improve cultural heritage assets</a></td>
+              <td class="govuk-table__cell"><a href=""></a></td>
+              <td class="govuk-table__cell"><a href="snippets/manage-historic-sites-grassland">Manage historic sites in grassland</a></td>
+              <td class="govuk-table__cell"><a href=""></a></td>          
+            </tr>
+          </tbody>
+        </table>
+
+        <br><br>
+
+    </div>
+
+    
+</div>
+
+{% endblock %}

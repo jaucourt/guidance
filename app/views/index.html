@@ -1,30 +1,70 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+Environmental land management
 {% endblock %}
+
+{% block header %}
+<!-- Blank header with no service name for the start page -->
+{{ govukHeader() }}
+{% endblock %}
+
+<!-- Adds spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-        Guidance prototype
-        <!--<span class="govuk-caption-xl">{{releaseVersion}}</span>-->
-      </h1>{{releaseVersion | log }}
-      <h2  class="govuk-heading-l">Goal</h2>
-      <p class="govuk-body-l">Guidance</p>
-      <h2 class="govuk-heading-l">Journeys and overview</h2>
-      <p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-       </p>
-    </div>
-</div>
+<div class="govuk-grid-row">
 
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">Prototypes</span>
+    <h1 class="govuk-heading-xl">ELM technical guidance</h1>
+
+    <h2 class="govuk-heading-l">Full guidance pieces</h2>
+
+    <p><a href="prototype-guidance/index-full">Link to full guidance index</a></p>
+
+    <h2 class="govuk-heading-l">Guidance snippets</h2>
+
+    <p class='govuk-body-l'>Provided by Natural England in September 2019. Prototyped for use in DDTS user research.</p>
+
+    <p><a href="prototype-guidance/index-snippets">Link to snippets index</a></p>
+
+      <!-- {{ govukButton({
+              text: "Access thriving plants and wildlife guidance",
+              href: "restore-maintain-habitats-on-your-land"
+            }) }}
+
+      {{ govukButton({
+              text: "Access beauty, heritage and engagement guidance",
+              href: "preserving-designated-undesignated-cultural-heritage-assets-on-land"
+            }) }} -->
+
+
+  </div>
+
+
+
+  <div class="govuk-grid-column-one-third">
+    <aside class="app-related-items" role="complementary">
+      
+      <h2 class="govuk-heading-m" id="subsection-title">Related content</h2>
+
+      <nav role="navigation" aria-labelledby="subsection-title">
+        
+        <!-- <h3 class="govuk-heading-s">Resources</h3>
+
+        <ul class="govuk-list govuk-!-font-size-16">
+        </ul>
+
+        <h3 class="govuk-heading-s">Design assets</h3>
+
+        <ul class="govuk-list govuk-!-font-size-16">          
+        </ul> -->
+
+      </nav>
+    </aside>
+
+  </div>
+</div>
 {% endblock %}
